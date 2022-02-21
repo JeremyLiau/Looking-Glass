@@ -19,13 +19,13 @@ func _ready():
 func _on_Area_area_entered(area):
 	if area.get_name() == "LookingGlass":
 		tween.interpolate_property($Sprite, "modulate",
-		Color(1,1,1,1), Color(1,1,1,0.5), 0.5,
+		Color(1,1,1,1), Color(1,1,1,0.2), .2,
 		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	tween.start()
 
 func _on_Area_area_exited(area):
 	if area.get_name() == "LookingGlass":
 		tween.interpolate_property($Sprite, "modulate",
-		Color(1,1,1,0.5), Color(1,1,1,1), 0.5,
+		Color(1,1,1,0.2), Color(1,1,1,1), .2,
 		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	tween.start()
