@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Placeholder_Player.png-37f7dec711cb65c47954cffa0f56ee7f.stex"
+path="res://.import/TempWallofDeath.png-ab4e6bdc15a52aed71358aefd00682b5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Placeholder_Player.png"
-dest_files=[ "res://.import/Placeholder_Player.png-37f7dec711cb65c47954cffa0f56ee7f.stex" ]
+source_file="res://Sprites/TempWallofDeath.png"
+dest_files=[ "res://.import/TempWallofDeath.png-ab4e6bdc15a52aed71358aefd00682b5.stex" ]
 
 [params]
 
