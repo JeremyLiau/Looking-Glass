@@ -1,19 +1,33 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/WallOfDeath.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/LookingGlass.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/IllusoryObject.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/FloorSwitch.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/IllusoryFloorSwitch.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/HiddenFloorSwitch.tscn" type="PackedScene" id=7]
 
 [node name="TestLevel" type="Node2D"]
 
+[node name="FloorSwitch" parent="." instance=ExtResource( 5 )]
+position = Vector2( 272, 76 )
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 164, 142 )
+z_index = 10
 
 [node name="WallOfDeath" parent="." instance=ExtResource( 2 )]
 position = Vector2( 240, 254 )
 
 [node name="LookingGlass" parent="." instance=ExtResource( 3 )]
+position = Vector2( 420, 56 )
 
 [node name="IllusoryObject" parent="." instance=ExtResource( 4 )]
-position = Vector2( 235, 119 )
+position = Vector2( 169, 77 )
+
+[node name="HiddenFloorSwitch" parent="." instance=ExtResource( 7 )]
+position = Vector2( 56, 194 )
+
+[node name="IllusoryFloorSwitch" parent="." instance=ExtResource( 6 )]
+position = Vector2( 59, 76 )
