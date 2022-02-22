@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const MAX_SPEED = 100
+var speed = 125
 
 var velocity = Vector2.ZERO
 
@@ -19,7 +19,7 @@ func _physics_process(delta):
 	input_vector = input_vector.normalized()
 	
 	if input_vector != Vector2.ZERO:
-		velocity = input_vector * MAX_SPEED
+		velocity = input_vector * speed
 	else:
 		velocity = Vector2.ZERO
 		
