@@ -1,0 +1,216 @@
+[gd_scene load_steps=73 format=2]
+
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet15.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet16.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet17.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet12.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet4.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet6.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet11.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet2.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet5.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet3.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet10.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet8.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet9.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet13.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet7.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet14.png" type="Texture" id=17]
+[ext_resource path="res://Scripts/FloorPowerLineRightDir.gd" type="Script" id=18]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet7.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet13.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet8.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet6.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet5.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet3.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet2.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet1.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet4.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet17.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet15.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet16.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet14.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet12.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet10.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet11.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/FloorPowerLineCW/FloorPowerLineCWSprSheet9.png" type="Texture" id=35]
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 26 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 16 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 14 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 15 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 28 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 30 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 29 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 31 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 20 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 32 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 34 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 33 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 35 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 21 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=85]
+atlas = ExtResource( 22 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=86]
+atlas = ExtResource( 23 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=87]
+atlas = ExtResource( 27 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 24 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=89]
+atlas = ExtResource( 25 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=90]
+atlas = ExtResource( 26 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=19]
+animations = [ {
+"frames": [ SubResource( 56 ) ],
+"loop": true,
+"name": "defaultanim",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ) ],
+"loop": false,
+"name": "activated",
+"speed": 25.0
+}, {
+"frames": [ SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ) ],
+"loop": false,
+"name": "deactivated",
+"speed": 25.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 8, 8 )
+
+[node name="CCWFloorPowerLineSeven" type="Area2D"]
+script = ExtResource( 18 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 19 )
+animation = "defaultanim"
+speed_scale = 4.0
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 50, 0 )
+collide_with_areas = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 20 )
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

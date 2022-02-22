@@ -38,7 +38,7 @@ func _physics_process(delta):
 		anim.frame = 2
 		facingDir = Vector2(-1, 0)
 		
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		try_interact()
 		

@@ -1,15 +1,21 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Sprites/BackgroundColor.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/CCWFloorPowerLineThree.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/LookingGlass.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/IllusoryObject.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/FloorSwitch.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/IllusoryFloorSwitch.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/FloorPowerLineOne.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/CCWFloorPowerLineOne.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/NormalDoor.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Sprites/RoughDungeonSprSheet.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/Lever.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/CCWFloorPowerLineTwo.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/CCWFloorPowerLineFour.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/CCWFloorPowerLineSix.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/CCWFloorPowerLineSeven.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/CCWFloorPowerLineEight.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/CCWFloorPowerLineNine.tscn" type="PackedScene" id=16]
 
 [sub_resource type="TileSet" id=1]
 1/name = "RoughDungeonSprSheet.png 1"
@@ -312,20 +318,50 @@ format = 1
 [node name="Lever" parent="TileMap" instance=ExtResource( 10 )]
 position = Vector2( 288, 144 )
 
-[node name="Background" type="Sprite" parent="."]
-position = Vector2( 196, 280 )
-scale = Vector2( 500.5, 301 )
-z_index = -4096
-texture = ExtResource( 2 )
-
 [node name="FloorPowerLineOne" parent="." instance=ExtResource( 7 )]
-position = Vector2( 64, 72 )
+position = Vector2( -72, 112 )
 
-[node name="FloorPowerLineOne1" parent="." instance=ExtResource( 7 )]
-position = Vector2( 64, 88 )
+[node name="CCWFloorPowerLineTwo" parent="." instance=ExtResource( 11 )]
+position = Vector2( -24, 112 )
 
-[node name="FloorPowerLineOne2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 64, 104 )
+[node name="CCWFloorPowerLineTwo2" parent="." instance=ExtResource( 11 )]
+position = Vector2( -40, 112 )
 
-[node name="FloorPowerLineOne3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 64, 120 )
+[node name="CCWFloorPowerLineTwo3" parent="." instance=ExtResource( 11 )]
+position = Vector2( -56, 112 )
+
+[node name="CCWFloorPowerLineThree" parent="." instance=ExtResource( 2 )]
+position = Vector2( -8, 112 )
+
+[node name="CCWFloorPowerLineFour" parent="." instance=ExtResource( 12 )]
+position = Vector2( -72, 128 )
+
+[node name="CCWFloorPowerLineFour2" parent="." instance=ExtResource( 12 )]
+position = Vector2( -72, 144 )
+
+[node name="CCWFloorPowerLineFour3" parent="." instance=ExtResource( 12 )]
+position = Vector2( -72, 160 )
+
+[node name="CCWFloorPowerLineSix" parent="." instance=ExtResource( 13 )]
+position = Vector2( -8, 160 )
+
+[node name="CCWFloorPowerLineSix2" parent="." instance=ExtResource( 13 )]
+position = Vector2( -8, 144 )
+
+[node name="CCWFloorPowerLineSix3" parent="." instance=ExtResource( 13 )]
+position = Vector2( -8, 128 )
+
+[node name="CCWFloorPowerLineSeven" parent="." instance=ExtResource( 14 )]
+position = Vector2( -72, 176 )
+
+[node name="CCWFloorPowerLineEight" parent="." instance=ExtResource( 15 )]
+position = Vector2( -56, 176 )
+
+[node name="CCWFloorPowerLineEight2" parent="." instance=ExtResource( 15 )]
+position = Vector2( -40, 176 )
+
+[node name="CCWFloorPowerLineEight3" parent="." instance=ExtResource( 15 )]
+position = Vector2( -24, 176 )
+
+[node name="CCWFloorPowerLineNine" parent="." instance=ExtResource( 16 )]
+position = Vector2( -8, 176 )
