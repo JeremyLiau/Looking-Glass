@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/CCW Power Line Tiles/CCWFloorPowerLineThree.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/LookingGlass.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/IllusoryObject.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/FloorSwitch.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Key15FloorSwitch.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/IllusoryFloorSwitch.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/CCW Power Line Tiles/CCWFloorPowerLineOne.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/NormalDoor.tscn" type="PackedScene" id=8]
@@ -296,7 +296,7 @@
 [node name="TestLevel" type="Node2D"]
 
 [node name="FloorSwitch" parent="." instance=ExtResource( 5 )]
-position = Vector2( 200, 184 )
+position = Vector2( 88, 48 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 144, 120 )
