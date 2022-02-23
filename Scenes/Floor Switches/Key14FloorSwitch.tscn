@@ -1,0 +1,127 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://Sprites/FloorSwitchActivated/FloorSwitchSprSheet4.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/FloorSwitch.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/FloorSwitchActivated/FloorSwitchSprSheet6.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/FloorSwitchActivated/FloorSwitchSprSheet5.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/FloorSwitchActivated/FloorSwitchSprSheet3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/FloorSwitchActivated/FloorSwitchSprSheet7.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/FloorSwitchActivated/FloorSwitchSprSheet2.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/FloorSwitchActivated/FloorSwitchSprSheet1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/FloorSwitchDeactivated/FloorSwitchDeactivated1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/FloorSwitchDeactivated/FloorSwitchDeactivated2.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/FloorSwitchDeactivated/FloorSwitchDeactivated3.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/FloorSwitchDeactivated/FloorSwitchDeactivated4.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/FloorSwitchDeactivated/FloorSwitchDeactivated5.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/FloorSwitchDeactivated/FloorSwitchDeactivated6.png" type="Texture" id=14]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5, 5 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 8 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 8 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 7 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 5 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 4 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 3 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 6 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 9 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 10 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 11 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 12 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 13 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 14 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ SubResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
+"loop": false,
+"name": "activated",
+"speed": 25.0
+}, {
+"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"loop": false,
+"name": "deactivated",
+"speed": 25.0
+} ]
+
+[node name="Key14FloorSwitch" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="RayCastNorth" type="RayCast2D" parent="."]
+cast_to = Vector2( 0, -50 )
+collide_with_areas = true
+
+[node name="RayCastEast" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 50, 0 )
+collide_with_areas = true
+
+[node name="RayCastSouth" type="RayCast2D" parent="."]
+enabled = true
+collide_with_areas = true
+
+[node name="RayCastWest" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( -50, 0 )
+collide_with_areas = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 10 )
+speed_scale = 4.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

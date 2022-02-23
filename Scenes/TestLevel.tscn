@@ -1,10 +1,10 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/CCW Power Line Tiles/CCWFloorPowerLineThree.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/LookingGlass.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/IllusoryObject.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Key15FloorSwitch.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Floor Switches/Key15FloorSwitch.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/IllusoryFloorSwitch.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/CCW Power Line Tiles/CCWFloorPowerLineOne.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/NormalDoor.tscn" type="PackedScene" id=8]
@@ -24,6 +24,20 @@
 [ext_resource path="res://Scenes/CW Power Line Tiles/CWFloorPowerLineEight.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scenes/CW Power Line Tiles/CWFloorPowerLineSeven.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Scenes/CW Power Line Tiles/CWFloorPowerLineNine.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/Floor Switches/Key14FloorSwitch.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scenes/Floor Switches/Key13FloorSwitch.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Scenes/Floor Switches/Key12FloorSwitch.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Scenes/Floor Switches/Key11FloorSwitch.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Scenes/Floor Switches/Key10FloorSwitch.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Scenes/Floor Switches/Key9FloorSwitch.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Scenes/Floor Switches/Key8FloorSwitch.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Scenes/Floor Switches/Key7FloorSwitch.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Scenes/Floor Switches/Key6FloorSwitch.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Scenes/Floor Switches/Key5FloorSwitch.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Scenes/Floor Switches/Key4FloorSwitch.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Scenes/Floor Switches/Key3FloorSwitch.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Scenes/Floor Switches/Key2FloorSwitch.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Scenes/Floor Switches/Key1FloorSwitch.tscn" type="PackedScene" id=38]
 
 [sub_resource type="TileSet" id=1]
 1/name = "RoughDungeonSprSheet.png 1"
@@ -421,3 +435,57 @@ position = Vector2( 8, 176 )
 
 [node name="CWFloorPowerLineNine" parent="." instance=ExtResource( 24 )]
 position = Vector2( 72, 176 )
+
+[node name="CCWFloorPowerLineFour4" parent="." instance=ExtResource( 12 )]
+position = Vector2( 88, 64 )
+
+[node name="CCWFloorPowerLineSix4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 88, 32 )
+
+[node name="CCWFloorPowerLineTwo4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 72, 48 )
+
+[node name="CCWFloorPowerLineEight4" parent="." instance=ExtResource( 15 )]
+position = Vector2( 104, 48 )
+
+[node name="FloorSwitch2" parent="." instance=ExtResource( 25 )]
+position = Vector2( 176, 0 )
+
+[node name="Key13FloorSwitch" parent="." instance=ExtResource( 26 )]
+position = Vector2( 160, 0 )
+
+[node name="Key12FloorSwitch" parent="." instance=ExtResource( 27 )]
+position = Vector2( 208, -16 )
+
+[node name="Key11FloorSwitch" parent="." instance=ExtResource( 28 )]
+position = Vector2( 192, -16 )
+
+[node name="Key10FloorSwitch" parent="." instance=ExtResource( 29 )]
+position = Vector2( 176, -16 )
+
+[node name="Key9FloorSwitch" parent="." instance=ExtResource( 30 )]
+position = Vector2( 160, -16 )
+
+[node name="Key8FloorSwitch" parent="." instance=ExtResource( 31 )]
+position = Vector2( 208, -32 )
+
+[node name="Key7FloorSwitch" parent="." instance=ExtResource( 32 )]
+position = Vector2( 192, -32 )
+
+[node name="Key6FloorSwitch" parent="." instance=ExtResource( 33 )]
+position = Vector2( 176, -32 )
+
+[node name="Key5FloorSwitch" parent="." instance=ExtResource( 34 )]
+position = Vector2( 160, -32 )
+
+[node name="Key4FloorSwitch" parent="." instance=ExtResource( 35 )]
+position = Vector2( 208, -48 )
+
+[node name="Key3FloorSwitch" parent="." instance=ExtResource( 36 )]
+position = Vector2( 192, -48 )
+
+[node name="Key2FloorSwitch" parent="." instance=ExtResource( 37 )]
+position = Vector2( 176, -48 )
+
+[node name="Key1FloorSwitch" parent="." instance=ExtResource( 38 )]
+position = Vector2( 160, -48 )

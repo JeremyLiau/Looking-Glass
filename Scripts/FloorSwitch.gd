@@ -27,7 +27,6 @@ func _on_Area2D_body_entered(body):
 func try_interact(raycast, dir):
 	raycast.cast_to = dir * interactDist
 	if raycast.is_colliding():
-		print(raycast.get_collider())
 		if raycast.get_collider().has_method("on_interact"):
 			raycast.get_collider().on_interact()
 
