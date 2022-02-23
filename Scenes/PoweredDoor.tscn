@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=2]
+[gd_scene load_steps=125 format=2]
 
 [ext_resource path="res://Sprites/SingleLinePoweredDoorSprSheet.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/SingleLineUnpoweredDoorSprSheet.png" type="Texture" id=2]
@@ -497,7 +497,10 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=120]
 extents = Vector2( 16, 8 )
 
-[node name="PoweredDoor" type="StaticBody2D"]
+[sub_resource type="RectangleShape2D" id=121]
+extents = Vector2( 16, 8 )
+
+[node name="PoweredDoor" type="Area2D"]
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -508,5 +511,11 @@ playing = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 24 )
 shape = SubResource( 120 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 0, 24 )
+shape = SubResource( 121 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
