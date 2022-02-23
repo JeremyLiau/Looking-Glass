@@ -208,6 +208,7 @@ speed_scale = 4.0
 [node name="RayCast2D" type="RayCast2D" parent="."]
 enabled = true
 collide_with_areas = true
+collide_with_bodies = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 20 )

@@ -36,10 +36,6 @@
 [ext_resource path="res://Sprites/FloorPowerLineCCW/FloorPowerLineCCWSprSheet14.png" type="Texture" id=34]
 [ext_resource path="res://Scripts/FloorPowerLineDownDir.gd" type="Script" id=35]
 
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 10 )
-region = Rect2( 0, 16, 16, 16 )
-
 [sub_resource type="AtlasTexture" id=22]
 atlas = ExtResource( 25 )
 region = Rect2( 0, 16, 16, 16 )
@@ -106,6 +102,10 @@ region = Rect2( 0, 16, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=38]
 atlas = ExtResource( 11 )
+region = Rect2( 0, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 10 )
 region = Rect2( 0, 16, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=39]
@@ -178,15 +178,15 @@ region = Rect2( 0, 16, 16, 16 )
 
 [sub_resource type="SpriteFrames" id=19]
 animations = [ {
-"frames": [ SubResource( 21 ) ],
-"loop": true,
-"name": "defaultanim",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
 "loop": false,
 "name": "activated",
 "speed": 25.0
+}, {
+"frames": [ SubResource( 21 ) ],
+"loop": true,
+"name": "defaultanim",
+"speed": 5.0
 }, {
 "frames": [ SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ) ],
 "loop": false,
@@ -208,6 +208,7 @@ speed_scale = 4.0
 [node name="RayCast2D" type="RayCast2D" parent="."]
 enabled = true
 collide_with_areas = true
+collide_with_bodies = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 20 )
