@@ -1,10 +1,6 @@
 extends Node2D
 
 onready var tween = get_node("Tween")
-
-func _on_Area2D_body_entered(body):
-	if body.get_name() == "Player":
-		print("Hidden floor switch stepped on")
 		
 func _on_Area2D_area_entered(area):
 	if area.get_name() == "LookingGlass":
