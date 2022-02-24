@@ -7,6 +7,10 @@ var interactDist : int = 32
 var facingDir = Vector2(0, -1)
 var activated = false
 
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	anim.set_speed_scale(5)
+
 func try_interact():
 	raycast.cast_to = facingDir * interactDist
 	if raycast.is_colliding():

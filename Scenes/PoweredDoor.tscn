@@ -501,6 +501,7 @@ extents = Vector2( 16, 8 )
 extents = Vector2( 16, 8 )
 
 [node name="PoweredDoor" type="Area2D"]
+z_index = 1
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
