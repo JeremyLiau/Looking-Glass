@@ -380,7 +380,7 @@
 [node name="MainLevel" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -1128, 784 )
+position = Vector2( -1024, -232 )
 z_index = 10
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
