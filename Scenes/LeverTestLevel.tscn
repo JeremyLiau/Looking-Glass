@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Lever.tscn" type="PackedScene" id=2]
@@ -16,6 +16,14 @@
 [ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineSix.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineThree.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineTwo.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Illusory CCW Power Line Tiles/IllusoryCCWFloorPowerLineNine.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Illusory CCW Power Line Tiles/IllusoryCCWFloorPowerLineThree.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Illusory CCW Power Line Tiles/IllusoryCCWFloorPowerLineOne.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Illusory CCW Power Line Tiles/IllusoryCCWFloorPowerLineSeven.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Illusory CCW Power Line Tiles/IllusoryCCWFloorPowerLineSix.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Illusory CCW Power Line Tiles/IllusoryCCWFloorPowerLineEight.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Illusory CCW Power Line Tiles/IllusoryCCWFloorPowerLineFour.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/Illusory CCW Power Line Tiles/IllusoryCCWFloorPowerLineTwo.tscn" type="PackedScene" id=24]
 
 [sub_resource type="TileSet" id=1]
 1/name = "RoughDungeonSprSheet.png 1"
@@ -285,7 +293,7 @@
 19/shapes = [  ]
 19/z_index = 0
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="LeverTestLevel" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
@@ -341,3 +349,27 @@ position = Vector2( 392, 56 )
 
 [node name="IllusoryCWFloorPowerLineTwo" parent="." instance=ExtResource( 16 )]
 position = Vector2( 376, 56 )
+
+[node name="IllusoryCCWFloorPowerLineEight" parent="." instance=ExtResource( 22 )]
+position = Vector2( 440, 88 )
+
+[node name="IllusoryCCWFloorPowerLineFour" parent="." instance=ExtResource( 23 )]
+position = Vector2( 424, 72 )
+
+[node name="IllusoryCCWFloorPowerLineNine" parent="." instance=ExtResource( 17 )]
+position = Vector2( 456, 88 )
+
+[node name="IllusoryCCWFloorPowerLineOne" parent="." instance=ExtResource( 19 )]
+position = Vector2( 424, 56 )
+
+[node name="IllusoryCCWFloorPowerLineSeven" parent="." instance=ExtResource( 20 )]
+position = Vector2( 424, 88 )
+
+[node name="IllusoryCCWFloorPowerLineSix" parent="." instance=ExtResource( 21 )]
+position = Vector2( 456, 72 )
+
+[node name="IllusoryCCWFloorPowerLineThree" parent="." instance=ExtResource( 18 )]
+position = Vector2( 456, 56 )
+
+[node name="IllusoryCCWFloorPowerLineTwo" parent="." instance=ExtResource( 24 )]
+position = Vector2( 440, 56 )

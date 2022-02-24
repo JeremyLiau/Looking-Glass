@@ -200,7 +200,7 @@ extents = Vector2( 8, 8 )
 [sub_resource type="RectangleShape2D" id=91]
 extents = Vector2( 8, 8 )
 
-[node name="IllusoryCCWFloorPowerLineSeven" type="Area2D"]
+[node name="IllusoryCCWFloorPowerLineSeven" type="Area2D" groups=["Toggle"]]
 script = ExtResource( 18 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
