@@ -24,7 +24,6 @@ func on_interact():
 	if(!activated):
 		activated = true
 		anim.play("activated")
-		#anim.play()
 	else:
 		activated = false
 		anim.play("deactivated")
@@ -33,18 +32,29 @@ func _on_AnimatedSprite_animation_finished():
 	try_interact()
 
 func _on_FadeArea_area_entered(area):
-	if(illusory):
-		if area.get_name() == "LookingGlass":
-			tween.interpolate_property(anim, "modulate",
-			Color(1,1,1,1), Color(1,1,1,0), .2,
-			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-		tween.start()
+	if area.get_name() == "LookingGlass":
+		if(illusory):
+			tweenEffect(1, 0)
+		else:
+			tweenEffect(0, 1)
 
 func _on_FadeArea_area_exited(area):
+	if area.get_name() == "LookingGlass":
+		if(illusory):
+			tweenEffect(0, 1)
+		else:
+			tweenEffect(1, 0)
+
+func illusion_toggle():
 	if(illusory):
-		if area.get_name() == "LookingGlass":
-			tween.interpolate_property(anim, "modulate",
-			Color(1,1,1,0), Color(1,1,1,1), .2,
-			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-		tween.start()
-		
+		illusory = false
+		tweenEffect(1, 0)
+	else:
+		illusory = true
+		tweenEffect(0, 1)
+
+func tweenEffect(from, to):
+	tween.interpolate_property(anim, "modulate",
+	Color(1,1,1,from), Color(1,1,1,to), .2,
+	Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tween.start()
