@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/CCW Power Line Tiles/CCWFloorPowerLineThree.tscn" type="PackedScene" id=2]
@@ -39,6 +39,7 @@
 [ext_resource path="res://Scenes/Floor Switches/Key2FloorSwitch.tscn" type="PackedScene" id=37]
 [ext_resource path="res://Scenes/Floor Switches/Key1FloorSwitch.tscn" type="PackedScene" id=38]
 [ext_resource path="res://Scenes/PoweredDoor.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Scenes/IllusoryPoweredDoor.tscn" type="PackedScene" id=40]
 
 [sub_resource type="TileSet" id=1]
 1/name = "RoughDungeonSprSheet.png 1"
@@ -311,7 +312,7 @@
 [node name="TestLevel" type="Node2D"]
 
 [node name="FloorSwitch" parent="." instance=ExtResource( 5 )]
-position = Vector2( 88, 40 )
+position = Vector2( -48, -64 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 144, 120 )
@@ -439,16 +440,25 @@ position = Vector2( 8, 184 )
 position = Vector2( 72, 184 )
 
 [node name="CCWFloorPowerLineFour4" parent="." instance=ExtResource( 12 )]
-position = Vector2( 88, 56 )
+position = Vector2( -48, -48 )
+
+[node name="CCWFloorPowerLineFour5" parent="." instance=ExtResource( 12 )]
+position = Vector2( -48, -32 )
+
+[node name="CCWFloorPowerLineFour6" parent="." instance=ExtResource( 12 )]
+position = Vector2( -48, -16 )
+
+[node name="CCWFloorPowerLineFour7" parent="." instance=ExtResource( 12 )]
+position = Vector2( -48, 0 )
 
 [node name="CCWFloorPowerLineSix4" parent="." instance=ExtResource( 13 )]
-position = Vector2( 88, 24 )
+position = Vector2( -48, -80 )
 
 [node name="CCWFloorPowerLineTwo4" parent="." instance=ExtResource( 11 )]
-position = Vector2( 72, 40 )
+position = Vector2( -64, -64 )
 
 [node name="CCWFloorPowerLineEight4" parent="." instance=ExtResource( 15 )]
-position = Vector2( 104, 40 )
+position = Vector2( -32, -64 )
 
 [node name="FloorSwitch2" parent="." instance=ExtResource( 25 )]
 position = Vector2( 176, -8 )
@@ -493,4 +503,7 @@ position = Vector2( 176, -56 )
 position = Vector2( 160, -56 )
 
 [node name="PoweredDoor" parent="." instance=ExtResource( 39 )]
-position = Vector2( 96, -16 )
+position = Vector2( -40, -120 )
+
+[node name="IllusoryPoweredDoor" parent="." instance=ExtResource( 40 )]
+position = Vector2( -40, -8 )
