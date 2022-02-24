@@ -3,9 +3,11 @@ extends Node2D
 onready var tween = get_node("Tween")
 var illusory = true
 onready var collisionShape = $StaticBody2D/CollisionShape2D
+var lookingGlassed = false  #Terrible name, but essentially means that the looking glass is hovering over the object. This is used in the illusion toggle to retain visual when hovered with looking glass while toggling
 
 func _on_Area2D_area_entered(area):
 	if area.get_name() == "LookingGlass":
+		lookingGlassed = true
 		if(illusory):
 			tweenEffect(1, 0)
 		else:
@@ -13,6 +15,7 @@ func _on_Area2D_area_entered(area):
 
 func _on_Area2D_area_exited(area):
 	if area.get_name() == "LookingGlass":
+		lookingGlassed = false
 		if(illusory):
 			tweenEffect(0, 1)
 		else:
@@ -21,11 +24,17 @@ func _on_Area2D_area_exited(area):
 func illusion_toggle():
 	if(illusory):
 		illusory = false
-		tweenEffect(1, 0)
+		if(!lookingGlassed):
+			tweenEffect(1, 0)
+		else:
+			tweenEffect(0, 1)
 		collisionShape.disabled = true
 	else:
 		illusory = true
-		tweenEffect(0, 1)
+		if(!lookingGlassed):
+			tweenEffect(0, 1)
+		else:
+			tweenEffect(1, 0)
 		collisionShape.disabled = false
 
 func tweenEffect(from, to):

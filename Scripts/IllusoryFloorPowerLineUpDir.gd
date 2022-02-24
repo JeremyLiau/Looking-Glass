@@ -9,6 +9,7 @@ var activated = false
 
 var illusory = true
 onready var tween = get_node("Tween")
+var lookingGlassed = false #Terrible name, but essentially means that the looking glass is hovering over the object. This is checked to make sure that the lookingGlass fade effect takes precedence over the half-fade when the player stands behind an object
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -33,6 +34,7 @@ func _on_AnimatedSprite_animation_finished():
 
 func _on_FadeArea_area_entered(area):
 	if area.get_name() == "LookingGlass":
+		lookingGlassed = true
 		if(illusory):
 			tweenEffect(1, 0)
 		else:
@@ -40,6 +42,7 @@ func _on_FadeArea_area_entered(area):
 
 func _on_FadeArea_area_exited(area):
 	if area.get_name() == "LookingGlass":
+		lookingGlassed = false
 		if(illusory):
 			tweenEffect(0, 1)
 		else:
@@ -48,10 +51,16 @@ func _on_FadeArea_area_exited(area):
 func illusion_toggle():
 	if(illusory):
 		illusory = false
-		tweenEffect(1, 0)
+		if(!lookingGlassed):
+			tweenEffect(1, 0)
+		else:
+			tweenEffect(0, 1)
 	else:
 		illusory = true
-		tweenEffect(0, 1)
+		if(!lookingGlassed):
+			tweenEffect(0, 1)
+		else:
+			tweenEffect(1, 0)
 
 func tweenEffect(from, to):
 	tween.interpolate_property(anim, "modulate",

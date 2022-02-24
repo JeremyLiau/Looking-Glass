@@ -66,12 +66,18 @@ func _on_FadeArea_body_exited(body):
 func illusion_toggle():
 	if(illusory):
 		illusory = false
-		collisionShape.disabled = false
-		tweenEffect(1, 0)
+		if(!lookingGlassed):
+			tweenEffect(1, 0)
+		else:
+			tweenEffect(0, 1)
+		collisionShape.disabled = true
 	else:
 		illusory = true
-		collisionShape.disabled = true
-		tweenEffect(0, 1)
+		if(!lookingGlassed):
+			tweenEffect(0, 1)
+		else:
+			tweenEffect(1, 0)
+		collisionShape.disabled = false
 
 func tweenEffect(from, to):
 	tween.interpolate_property(anim, "modulate",
