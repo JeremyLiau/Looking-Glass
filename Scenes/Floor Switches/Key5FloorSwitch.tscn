@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Sprites/FloorSwitchActivated/FloorSwitchSprSheet4.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/FloorSwitch.gd" type="Script" id=2]
@@ -92,7 +92,10 @@ animations = [ {
 "speed": 25.0
 } ]
 
-[node name="Key5FloorSwitch" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 8, 8 )
+
+[node name="Key5FloorSwitch" type="Node2D" groups=["Toggle"]]
 script = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -122,5 +125,16 @@ collide_with_areas = true
 frames = SubResource( 10 )
 speed_scale = 4.0
 
+[node name="Tween" type="Tween" parent="."]
+
+[node name="FadeArea" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FadeArea"]
+shape = SubResource( 25 )
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="area_entered" from="FadeArea" to="." method="_on_FadeArea_area_entered"]
+[connection signal="area_exited" from="FadeArea" to="." method="_on_FadeArea_area_exited"]
