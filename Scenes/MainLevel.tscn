@@ -465,10 +465,10 @@ position = Vector2( -1136, 192 )
 position = Vector2( -1040, -432 )
 
 [node name="CWFloorPowerLineEight" parent="." instance=ExtResource( 5 )]
-position = Vector2( -1184, -288 )
+position = Vector2( -1440, -392 )
 
 [node name="CWFloorPowerLineFour" parent="." instance=ExtResource( 6 )]
-position = Vector2( -1200, -304 )
+position = Vector2( -1456, -408 )
 
 [node name="CWFloorPowerLineFour8" parent="." instance=ExtResource( 6 )]
 position = Vector2( -1048, -8 )
@@ -501,19 +501,19 @@ position = Vector2( -1048, -376 )
 position = Vector2( -1048, -392 )
 
 [node name="CWFloorPowerLineNine" parent="." instance=ExtResource( 20 )]
-position = Vector2( -1168, -288 )
+position = Vector2( -1424, -392 )
 
 [node name="CWFloorPowerLineOne" parent="." instance=ExtResource( 14 )]
-position = Vector2( -1200, -320 )
+position = Vector2( -1456, -424 )
 
 [node name="CWFloorPowerLineSeven" parent="." instance=ExtResource( 19 )]
-position = Vector2( -1200, -288 )
+position = Vector2( -1456, -392 )
 
 [node name="CWFloorPowerLineSeven2" parent="." instance=ExtResource( 19 )]
 position = Vector2( -1048, 8 )
 
 [node name="CWFloorPowerLineSix" parent="." instance=ExtResource( 18 )]
-position = Vector2( -1168, -304 )
+position = Vector2( -1424, -408 )
 
 [node name="CWFloorPowerLineSix2" parent="." instance=ExtResource( 18 )]
 position = Vector2( -1048, -136 )
@@ -555,10 +555,10 @@ position = Vector2( -1048, -264 )
 position = Vector2( -1048, -280 )
 
 [node name="CWFloorPowerLineThree" parent="." instance=ExtResource( 13 )]
-position = Vector2( -1168, -320 )
+position = Vector2( -1424, -424 )
 
 [node name="CWFloorPowerLineTwo" parent="." instance=ExtResource( 21 )]
-position = Vector2( -1184, -320 )
+position = Vector2( -1440, -424 )
 
 [node name="CWFloorPowerLineTwo3" parent="." instance=ExtResource( 21 )]
 position = Vector2( -1160, 328 )
@@ -567,7 +567,7 @@ position = Vector2( -1160, 328 )
 position = Vector2( -1176, 328 )
 
 [node name="CCWFloorPowerLineTwo" parent="." instance=ExtResource( 11 )]
-position = Vector2( -1200, -232 )
+position = Vector2( -1456, -336 )
 
 [node name="CCWFloorPowerLineTwo2" parent="." instance=ExtResource( 11 )]
 position = Vector2( -920, 8 )
@@ -594,10 +594,10 @@ position = Vector2( -1016, 8 )
 position = Vector2( -1032, 8 )
 
 [node name="CCWFloorPowerLineThree" parent="." instance=ExtResource( 12 )]
-position = Vector2( -1184, -232 )
+position = Vector2( -1440, -336 )
 
 [node name="CCWFloorPowerLineSix" parent="." instance=ExtResource( 8 )]
-position = Vector2( -1184, -216 )
+position = Vector2( -1440, -320 )
 
 [node name="CCWFloorPowerLineSix2" parent="." instance=ExtResource( 8 )]
 position = Vector2( -1144, 312 )
@@ -618,22 +618,22 @@ position = Vector2( -1144, 248 )
 position = Vector2( -1144, 232 )
 
 [node name="CCWFloorPowerLineSeven" parent="." instance=ExtResource( 16 )]
-position = Vector2( -1216, -200 )
+position = Vector2( -1472, -304 )
 
 [node name="CCWFloorPowerLineOne" parent="." instance=ExtResource( 4 )]
-position = Vector2( -1216, -232 )
+position = Vector2( -1472, -336 )
 
 [node name="CCWFloorPowerLineNine" parent="." instance=ExtResource( 10 )]
-position = Vector2( -1184, -200 )
+position = Vector2( -1440, -304 )
 
 [node name="CCWFloorPowerLineNine2" parent="." instance=ExtResource( 10 )]
 position = Vector2( -1144, 328 )
 
 [node name="CCWFloorPowerLineFour" parent="." instance=ExtResource( 15 )]
-position = Vector2( -1216, -216 )
+position = Vector2( -1472, -320 )
 
 [node name="CCWFloorPowerLineEight" parent="." instance=ExtResource( 17 )]
-position = Vector2( -1200, -200 )
+position = Vector2( -1456, -304 )
 
 [node name="Key2FloorSwitch" parent="." instance=ExtResource( 22 )]
 position = Vector2( -1192, 328 )

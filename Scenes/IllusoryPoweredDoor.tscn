@@ -503,7 +503,7 @@ extents = Vector2( 16, 8 )
 [sub_resource type="RectangleShape2D" id=122]
 extents = Vector2( 16, 32 )
 
-[node name="IllusoryPoweredDoor" type="Area2D"]
+[node name="IllusoryPoweredDoor" type="Area2D" groups=["Toggle"]]
 z_index = 1
 script = ExtResource( 3 )
 
