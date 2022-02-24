@@ -17,5 +17,3 @@ func on_interact ():
 		illusionToggleMembers = get_tree().get_nodes_in_group("Toggle")
 		for member in illusionToggleMembers:
 			member.illusion_toggle()
-
-#Find all objects in the tree that have a function "IllusionToggle"

@@ -23,28 +23,26 @@ func _on_AnimatedSprite_animation_finished():
 		collisionShape.disabled = true
 
 func _on_FadeArea_area_entered(area):
-	if(illusory):
-		if area.get_name() == "LookingGlass":
-			lookingGlassed = true
-			tweenEffect(1, 0)
-	else:
-		if area.get_name() == "LookingGlass":
-			lookingGlassed = true
-			if(playerBehind):
-				tweenEffect(0, 0.5)
-			else:
-				tweenEffect(0, 1)
+	if area.get_name() == "LookingGlass":
+		if(illusory):
+				lookingGlassed = true
+				tweenEffect(1, 0)
+		else:
+				lookingGlassed = true
+				if(playerBehind):
+					tweenEffect(0, 0.5)
+				else:
+					tweenEffect(0, 1)
 
 func _on_FadeArea_area_exited(area):
-	if(illusory):
-		if area.get_name() == "LookingGlass":
+	if area.get_name() == "LookingGlass":
+		if(illusory):
 			lookingGlassed = false
 			if(playerBehind):
 				tweenEffect(0, 0.5)
 			else:
 				tweenEffect(0, 1)
-	else:
-		if area.get_name() == "LookingGlass":
+		else:
 			lookingGlassed = false
 			if(playerBehind):
 				tweenEffect(0.5, 0)
@@ -53,11 +51,10 @@ func _on_FadeArea_area_exited(area):
 
 func _on_FadeArea_body_entered(body):
 	playerBehind = true
-	if(illusory and !lookingGlassed):
-		if body.get_name() == "Player":
+	if body.get_name() == "Player":
+		if(illusory and !lookingGlassed):
 			tweenEffect(1, 0.5)
-	elif(!illusory and lookingGlassed):
-		if body.get_name() == "Player":
+		elif(!illusory and lookingGlassed):
 			tweenEffect(1, 0.5)
 
 func _on_FadeArea_body_exited(body):
@@ -65,7 +62,7 @@ func _on_FadeArea_body_exited(body):
 	if(illusory and !lookingGlassed) or (!illusory and lookingGlassed):
 		if body.get_name() == "Player":
 			tweenEffect(0.5, 1)
-		
+
 func illusion_toggle():
 	if(illusory):
 		illusory = false
@@ -75,7 +72,7 @@ func illusion_toggle():
 		illusory = true
 		collisionShape.disabled = true
 		tweenEffect(0, 1)
-	
+
 func tweenEffect(from, to):
 	tween.interpolate_property(anim, "modulate",
 	Color(1,1,1,from), Color(1,1,1,to), .2,

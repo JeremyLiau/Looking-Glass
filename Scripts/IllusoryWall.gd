@@ -9,42 +9,58 @@ var playerBehind = false #One last check to fix visual clarity. Ensure that the 
 
 
 func _on_FadeArea_area_entered(area):
-	if(illusory):
-		if area.get_name() == "LookingGlass":
-			lookingGlassed = true
-			tween.interpolate_property($Sprite, "modulate",
-			Color(1,1,1,1), Color(1,1,1,0), .2,
-			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-		tween.start()
+	if area.get_name() == "LookingGlass":
+		if(illusory):
+				lookingGlassed = true
+				tweenEffect(1, 0)
+		else:
+				lookingGlassed = true
+				if(playerBehind):
+					tweenEffect(0, 0.5)
+				else:
+					tweenEffect(0, 1)
 
 func _on_FadeArea_area_exited(area):
-	if(illusory):
-		if area.get_name() == "LookingGlass":
+	if area.get_name() == "LookingGlass":
+		if(illusory):
 			lookingGlassed = false
 			if(playerBehind):
-				tween.interpolate_property($Sprite, "modulate",
-					Color(1,1,1,0), Color(1,1,1,0.5), .2,
-				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+				tweenEffect(0, 0.5)
 			else:
-				tween.interpolate_property($Sprite, "modulate",
-					Color(1,1,1,0), Color(1,1,1,1), .2,
-				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-		tween.start()
+				tweenEffect(0, 1)
+		else:
+			lookingGlassed = false
+			if(playerBehind):
+				tweenEffect(0.5, 0)
+			else:
+				tweenEffect(1, 0)
 
 func _on_FadeArea_body_entered(body):
 	playerBehind = true
-	if(illusory and !lookingGlassed):
-		if body.get_name() == "Player":
-			tween.interpolate_property($Sprite, "modulate",
-			Color(1,1,1,1), Color(1,1,1,0.5), .2,
-			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-		tween.start()
+	if body.get_name() == "Player":
+		if(illusory and !lookingGlassed):
+			tweenEffect(1, 0.5)
+		elif(!illusory and lookingGlassed):
+			tweenEffect(1, 0.5)
 
 func _on_FadeArea_body_exited(body):
 	playerBehind = false
-	if(illusory and !lookingGlassed):
+	if(illusory and !lookingGlassed) or (!illusory and lookingGlassed):
 		if body.get_name() == "Player":
-			tween.interpolate_property($Sprite, "modulate",
-			Color(1,1,1,0.5), Color(1,1,1,1), .2,
-			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-		tween.start()
+			tweenEffect(0.5, 1)
+
+func illusion_toggle():
+	if(illusory):
+		illusory = false
+		collisionShape.disabled = false
+		tweenEffect(1, 0)
+	else:
+		illusory = true
+		collisionShape.disabled = true
+		tweenEffect(0, 1)
+
+func tweenEffect(from, to):
+	tween.interpolate_property($Sprite, "modulate",
+	Color(1,1,1,from), Color(1,1,1,to), .2,
+	Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tween.start()
