@@ -1,7 +1,7 @@
 extends Node2D
 
 onready var tween = get_node("Tween")
-var illusory = false
+export var illusory = false
 onready var collisionShape = $StaticBody2D/CollisionShape2D
 var lookingGlassed = false  #Terrible name, but essentially means that the looking glass is hovering over the object. This is used in the illusion toggle to retain visual when hovered with looking glass while toggling
 

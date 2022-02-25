@@ -325,10 +325,11 @@ current = true
 position = Vector2( 240, 64 )
 
 [node name="Lever" parent="." instance=ExtResource( 2 )]
-position = Vector2( 304, 160 )
+position = Vector2( 176, 128 )
 
 [node name="IllusoryPoweredDoor" parent="." instance=ExtResource( 4 )]
 position = Vector2( 160, 32 )
+hasWall = false
 
 [node name="IllusoryPoweredDoor2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 112, 32 )
@@ -338,31 +339,38 @@ hasWall = false
 position = Vector2( 440, 168 )
 
 [node name="IllusorySideWall" parent="." instance=ExtResource( 7 )]
-position = Vector2( 440, 224 )
+position = Vector2( 384, 192 )
+illusory = false
 
 [node name="IllusoryForwardWall" parent="." instance=ExtResource( 6 )]
-position = Vector2( 464, 240 )
+position = Vector2( 328, 192 )
 
 [node name="IllusoryCWFloorPowerLineEight" parent="." instance=ExtResource( 8 )]
 position = Vector2( 320, 112 )
 
 [node name="IllusoryCWFloorPowerLineFour" parent="." instance=ExtResource( 10 )]
 position = Vector2( 152, 136 )
+illusory = false
 
 [node name="IllusoryCWFloorPowerLineFour6" parent="." instance=ExtResource( 10 )]
 position = Vector2( 152, 152 )
+illusory = false
 
 [node name="IllusoryCWFloorPowerLineFour2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 152, 120 )
+illusory = false
 
 [node name="IllusoryCWFloorPowerLineFour3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 152, 104 )
+illusory = false
 
 [node name="IllusoryCWFloorPowerLineFour4" parent="." instance=ExtResource( 10 )]
 position = Vector2( 152, 88 )
+illusory = false
 
 [node name="IllusoryCWFloorPowerLineFour5" parent="." instance=ExtResource( 10 )]
 position = Vector2( 152, 72 )
+illusory = false
 
 [node name="IllusoryCWFloorPowerLineNine" parent="." instance=ExtResource( 11 )]
 position = Vector2( 328, 24 )

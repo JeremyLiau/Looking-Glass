@@ -10,6 +10,7 @@ extents = Vector2( 8, 48 )
 extents = Vector2( 8, 24 )
 
 [node name="IllusorySideWall" type="Node2D" groups=["Toggle"]]
+z_index = 1
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

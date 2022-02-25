@@ -1,12 +1,19 @@
 extends Node2D
 
 onready var collisionShape = $StaticBody2D/CollisionShape2D
-var illusory = true
+export var illusory = true
 onready var tween = get_node("Tween")
 
 var lookingGlassed = false #Terrible name, but essentially means that the looking glass is hovering over the object. This is checked to make sure that the lookingGlass fade effect takes precedence over the half-fade when the player stands behind an object
 var playerBehind = false #One last check to fix visual clarity. Ensure that the fade remains at half-fade if the looking glass is removed while the player stands behind the object.
 
+func _ready():
+	if(illusory):
+		collisionShape.disabled = true
+		$Sprite.modulate = Color(1,1,1,1)
+	else:
+		collisionShape.disabled = false
+		$Sprite.modulate = Color(1,1,1,0)
 
 func _on_FadeArea_area_entered(area):
 	if area.get_name() == "LookingGlass":
