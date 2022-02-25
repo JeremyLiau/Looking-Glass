@@ -5,7 +5,7 @@ onready var anim = $AnimatedSprite
 onready var raycast = $RayCast2D
 var interactDist : int = 32
 var facingDir = Vector2(0, 1)
-var activated = false
+export var activated = false
 
 export var isReal = false
 export var illusory = true #Ignored if isReal is checked
@@ -22,7 +22,10 @@ func _ready():
 			anim.modulate = Color(1,1,1,1)
 		else:
 			anim.modulate = Color(1,1,1,0)
-	
+	if(activated):
+		anim.play("activated")
+		anim.frame = 16
+
 func try_interact():
 	raycast.cast_to = facingDir * interactDist
 	if raycast.is_colliding():
