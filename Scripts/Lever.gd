@@ -6,7 +6,7 @@ var illusionToggleMembers
 func _ready():
 	pass # Replace with function body.
 
-func on_interact ():
+func lever_toggle():
 	if(anim.frame == 0):
 		anim.frame = 1
 		illusionToggleMembers = get_tree().get_nodes_in_group("Toggle")

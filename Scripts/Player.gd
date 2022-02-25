@@ -45,5 +45,5 @@ func _process(_delta):
 func try_interact():
 	raycast.cast_to = facingDir * interactDist
 	if raycast.is_colliding():
-		if raycast.get_collider().has_method("on_interact"):
-			raycast.get_collider().on_interact()
+		if raycast.get_collider().has_method("lever_toggle"):
+			raycast.get_collider().lever_toggle()
