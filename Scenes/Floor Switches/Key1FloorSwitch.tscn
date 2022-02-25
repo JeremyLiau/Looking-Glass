@@ -122,7 +122,6 @@ collide_with_areas = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 10 )
-speed_scale = 4.0
 
 [node name="Tween" type="Tween" parent="."]
 

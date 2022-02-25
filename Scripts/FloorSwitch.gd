@@ -18,6 +18,9 @@ export var illusory = true #Toggle exists between illusory and non-illusory, if 
 onready var tween = get_node("Tween")
 var lookingGlassed = false #Terrible name, but essentially means that the looking glass is hovering over the object. This is used in the illusion toggle to retain visual when hovered with looking glass while toggling
 
+func _ready():
+	anim.set_speed_scale(1.5)
+
 func _on_Area2D_body_entered(body):
 	if(!illusory or isReal):
 		if body.get_name() == "Player":
