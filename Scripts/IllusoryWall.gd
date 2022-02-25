@@ -56,14 +56,14 @@ func illusion_toggle():
 			tweenEffect(1, 0)
 		else:
 			tweenEffect(0, 1)
-		collisionShape.disabled = true
+		collisionShape.disabled = false
 	else:
 		illusory = true
 		if(!lookingGlassed):
 			tweenEffect(0, 1)
 		else:
 			tweenEffect(1, 0)
-		collisionShape.disabled = false
+		collisionShape.disabled = true
 
 
 func tweenEffect(from, to):
