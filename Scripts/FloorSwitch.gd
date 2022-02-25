@@ -18,13 +18,14 @@ onready var tween = get_node("Tween")
 var lookingGlassed = false #Terrible name, but essentially means that the looking glass is hovering over the object. This is used in the illusion toggle to retain visual when hovered with looking glass while toggling
 
 func _on_Area2D_body_entered(body):
-	if body.get_name() == "Player":
-		if(!activated):
-			activated = true
-			anim.play("activated")
-		else:
-			activated = false
-			anim.play("deactivated")
+	if(!illusory):
+		if body.get_name() == "Player":
+			if(!activated):
+				activated = true
+				anim.play("activated")
+			else:
+				activated = false
+				anim.play("deactivated")
 
 func try_interact(raycast, dir):
 	raycast.cast_to = dir * interactDist
