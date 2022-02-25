@@ -1,0 +1,929 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineNine.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/InvisibleWall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineFour.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Floor Switches/Key4FloorSwitch.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/LookingGlass.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Lever.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/IllusoryPoweredDoor.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/IllusorySideWall.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Illusory CCW Power Line Tiles/IllusoryCCWFloorPowerLineFour.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineEight.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/IllusoryForwardWall.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Floor Switches/Key3FloorSwitch.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/IllusoryFloorTile.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineSeven.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Sprites/BackgroundColor.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/RoughDungeonSprSheet.png" type="Texture" id=17]
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 32, 48, 0, 48, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 48, 0, 48 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 16, 48, 0, 48, 0, 0, 16, 0 )
+
+[sub_resource type="TileSet" id=1]
+1/name = "RoughDungeonSprSheet.png 1"
+1/texture = ExtResource( 17 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 48, 0, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "RoughDungeonSprSheet.png 2"
+2/texture = ExtResource( 17 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 64, 0, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "RoughDungeonSprSheet.png 3"
+3/texture = ExtResource( 17 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 80, 0, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "RoughDungeonSprSheet.png 4"
+4/texture = ExtResource( 17 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 48, 16, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "RoughDungeonSprSheet.png 5"
+5/texture = ExtResource( 17 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 64, 16, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "RoughDungeonSprSheet.png 6"
+6/texture = ExtResource( 17 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 16, 0, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "RoughDungeonSprSheet.png 7"
+7/texture = ExtResource( 17 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 32, 0, 16, 16 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "RoughDungeonSprSheet.png 8"
+8/texture = ExtResource( 17 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 16, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "RoughDungeonSprSheet.png 9"
+9/texture = ExtResource( 17 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 16, 16, 16, 16 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "RoughDungeonSprSheet.png 10"
+10/texture = ExtResource( 17 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 32, 16, 16, 16 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "RoughDungeonSprSheet.png 11"
+11/texture = ExtResource( 17 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 16, 32, 16, 16 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "RoughDungeonSprSheet.png 12"
+12/texture = ExtResource( 17 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 32, 16, 16 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "RoughDungeonSprSheet.png 13"
+13/texture = ExtResource( 17 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 16, 16 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "RoughDungeonSprSheet.png 14"
+14/texture = ExtResource( 17 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 80, 16, 16, 16 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "RoughDungeonSprSheet.png 15"
+15/texture = ExtResource( 17 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 48, 32, 16, 16 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "RoughDungeonSprSheet.png 16"
+16/texture = ExtResource( 17 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 48, 16, 16 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "RoughDungeonSprSheet.png 17"
+17/texture = ExtResource( 17 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 16, 48, 16, 16 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "RoughDungeonSprSheet.png 18"
+18/texture = ExtResource( 17 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 0, 64, 32, 32 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "RoughDungeonSprSheet.png 19"
+19/texture = ExtResource( 17 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 64, 48, 32, 48 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape = SubResource( 4 )
+19/shape_one_way = false
+19/shape_one_way_margin = 1.0
+19/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+19/z_index = 0
+36/name = "RoughDungeonSprSheet.png 36"
+36/texture = ExtResource( 17 )
+36/tex_offset = Vector2( 0, 0 )
+36/modulate = Color( 1, 1, 1, 1 )
+36/region = Rect2( 32, 32, 16, 16 )
+36/tile_mode = 0
+36/occluder_offset = Vector2( 0, 0 )
+36/navigation_offset = Vector2( 0, 0 )
+36/shape_offset = Vector2( 0, 0 )
+36/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+36/shape_one_way = false
+36/shape_one_way_margin = 0.0
+36/shapes = [  ]
+36/z_index = 0
+37/name = "RoughDungeonSprSheet.png 37"
+37/texture = ExtResource( 17 )
+37/tex_offset = Vector2( 0, 0 )
+37/modulate = Color( 1, 1, 1, 1 )
+37/region = Rect2( 96, 0, 32, 16 )
+37/tile_mode = 0
+37/occluder_offset = Vector2( 0, 0 )
+37/navigation_offset = Vector2( 0, 0 )
+37/shape_offset = Vector2( 0, 0 )
+37/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+37/shape = SubResource( 2 )
+37/shape_one_way = false
+37/shape_one_way_margin = 1.0
+37/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+37/z_index = 0
+38/name = "RoughDungeonSprSheet.png 38"
+38/texture = ExtResource( 17 )
+38/tex_offset = Vector2( 0, 0 )
+38/modulate = Color( 1, 1, 1, 1 )
+38/region = Rect2( 192, 0, 16, 32 )
+38/tile_mode = 0
+38/occluder_offset = Vector2( 0, 0 )
+38/navigation_offset = Vector2( 0, 0 )
+38/shape_offset = Vector2( 0, 0 )
+38/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+38/shape = SubResource( 3 )
+38/shape_one_way = false
+38/shape_one_way_margin = 1.0
+38/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+38/z_index = 0
+39/name = "RoughDungeonSprSheet.png 39"
+39/texture = ExtResource( 17 )
+39/tex_offset = Vector2( 0, 0 )
+39/modulate = Color( 1, 1, 1, 1 )
+39/region = Rect2( 96, 80, 32, 32 )
+39/tile_mode = 0
+39/occluder_offset = Vector2( 0, 0 )
+39/navigation_offset = Vector2( 0, 0 )
+39/shape_offset = Vector2( 0, 0 )
+39/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+39/shape_one_way = false
+39/shape_one_way_margin = 0.0
+39/shapes = [  ]
+39/z_index = 0
+40/name = "RoughDungeonSprSheet.png 40"
+40/texture = ExtResource( 17 )
+40/tex_offset = Vector2( 0, 0 )
+40/modulate = Color( 1, 1, 1, 1 )
+40/region = Rect2( 96, 112, 16, 48 )
+40/tile_mode = 0
+40/occluder_offset = Vector2( 0, 0 )
+40/navigation_offset = Vector2( 0, 0 )
+40/shape_offset = Vector2( 0, 0 )
+40/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+40/shape = SubResource( 5 )
+40/shape_one_way = false
+40/shape_one_way_margin = 1.0
+40/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+40/z_index = 0
+41/name = "RoughDungeonSprSheet.png 41"
+41/texture = ExtResource( 17 )
+41/tex_offset = Vector2( 0, 0 )
+41/modulate = Color( 1, 1, 1, 1 )
+41/region = Rect2( 112, 112, 16, 48 )
+41/tile_mode = 0
+41/occluder_offset = Vector2( 0, 0 )
+41/navigation_offset = Vector2( 0, 0 )
+41/shape_offset = Vector2( 0, 0 )
+41/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+41/shape = SubResource( 6 )
+41/shape_one_way = false
+41/shape_one_way_margin = 1.0
+41/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+41/z_index = 0
+
+[node name="TutorialLevel" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 8 )]
+position = Vector2( -1136, 888 )
+z_index = 10
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = -1
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -1441861, 38, 0, -1441860, 37, 0, -1441858, 37, 0, -1441856, 37, 0, -1441854, 38, 0, -1376324, 8, 0, -1376323, 8, 0, -1376322, 8, 0, -1376321, 8, 0, -1376320, 8, 0, -1376319, 8, 0, -1310789, 38, 0, -1310788, 8, 0, -1310787, 15, 0, -1310786, 15, 0, -1310785, 15, 0, -1310784, 15, 0, -1310783, 8, 0, -1310782, 38, 0, -1245252, 8, 0, -1245251, 15, 0, -1245250, 15, 0, -1245249, 15, 0, -1245248, 15, 0, -1245247, 8, 0, -1179717, 38, 0, -1179716, 8, 0, -1179715, 8, 0, -1179714, 15, 0, -1179713, 15, 0, -1179712, 8, 0, -1179711, 8, 0, -1179710, 38, 0, -1114180, 38, 0, -1114179, 8, 0, -1114178, 13, 0, -1114177, 13, 0, -1114176, 8, 0, -1114175, 38, 0, -1048645, 40, 0, -1048643, 8, 0, -1048642, 13, 0, -1048641, 13, 0, -1048640, 8, 0, -1048638, 41, 0, -983108, 38, 0, -983107, 8, 0, -983106, 13, 0, -983105, 13, 0, -983104, 8, 0, -983103, 38, 0, -917571, 8, 0, -917570, 13, 0, -917569, 13, 0, -917568, 8, 0, -852037, 11, 0, -852036, 38, 0, -852035, 8, 0, -852034, 13, 0, -852033, 13, 0, -852032, 8, 0, -852031, 38, 0, -852030, 11, 0, -786501, 16, 0, -786500, 37, 0, -786498, 13, 0, -786497, 13, 0, -786496, 37, 0, -786494, 16, 0, -720964, 38, 0, -720963, 41, 0, -720962, 13, 0, -720961, 13, 0, -720960, 40, 0, -720959, 38, 0, -655426, 13, 0, -655425, 13, 0, -589892, 38, 0, -589890, 13, 0, -589889, 13, 0, -589887, 38, 0, -524355, 8, 0, -524354, 13, 0, -524353, 13, 0, -524352, 8, 0, -458829, 38, 0, -458828, 37, 0, -458826, 37, 0, -458824, 37, 0, -458822, 37, 0, -458820, 37, 0, -458818, 13, 0, -458817, 13, 0, -458816, 37, 0, -458814, 37, 0, -458812, 37, 0, -458810, 37, 0, -458808, 37, 0, -458806, 38, 0, -393292, 19, 0, -393290, 19, 0, -393288, 19, 0, -393286, 19, 0, -393284, 19, 0, -393282, 13, 0, -393281, 13, 0, -393280, 40, 0, -393279, 38, 0, -393278, 19, 0, -393276, 19, 0, -393274, 19, 0, -393272, 19, 0, -327757, 38, 0, -327746, 13, 0, -327745, 13, 0, -327734, 38, 0, -262210, 13, 0, -262209, 13, 0, -262207, 38, 0, -196685, 38, 0, -196684, 8, 0, -196683, 8, 0, -196682, 8, 0, -196681, 8, 0, -196680, 8, 0, -196679, 8, 0, -196678, 8, 0, -196677, 8, 0, -196676, 8, 0, -196675, 8, 0, -196674, 13, 0, -196673, 13, 0, -196672, 8, 0, -196670, 8, 0, -196669, 8, 0, -196668, 8, 0, -196667, 8, 0, -196666, 8, 0, -196665, 8, 0, -196664, 8, 0, -196663, 8, 0, -196662, 38, 0, -131149, 21, 0, -131148, 8, 0, -131147, 13, 0, -131146, 13, 0, -131145, 13, 0, -131144, 13, 0, -131143, 13, 0, -131142, 13, 0, -131141, 13, 0, -131140, 13, 0, -131139, 13, 0, -131138, 13, 0, -131137, 13, 0, -131136, 8, 0, -131135, 40, 0, -131134, 8, 0, -131133, 13, 0, -131132, 13, 0, -131131, 13, 0, -131130, 13, 0, -131129, 13, 0, -131128, 13, 0, -131127, 8, 0, -65613, 38, 0, -65612, 8, 0, -65611, 13, 0, -65610, 13, 0, -65609, 13, 0, -65608, 13, 0, -65607, 13, 0, -65606, 13, 0, -65605, 13, 0, -65604, 13, 0, -65603, 13, 0, -65602, 13, 0, -65601, 13, 0, -65600, 8, 0, -65598, 8, 0, -65597, 13, 0, -65596, 13, 0, -65595, 13, 0, -65594, 13, 0, -65593, 13, 0, -65592, 13, 0, -65591, 8, 0, -65590, 38, 0, -77, 21, 0, -76, 8, 0, -75, 13, 0, -74, 13, 0, -73, 13, 0, -72, 13, 0, -71, 13, 0, -70, 13, 0, -69, 13, 0, -68, 13, 0, -67, 13, 0, -66, 13, 0, -65, 13, 0, -64, 8, 0, -62, 8, 0, -61, 13, 0, -60, 13, 0, -59, 13, 0, -58, 13, 0, -57, 13, 0, -56, 13, 0, -55, 8, 0, -54, 23, 0, 65459, 38, 0, 65460, 8, 0, 65461, 13, 0, 65462, 13, 0, 65463, 13, 0, 65464, 13, 0, 65465, 13, 0, 65466, 13, 0, 65467, 13, 0, 65468, 13, 0, 65469, 13, 0, 65470, 13, 0, 65471, 13, 0, 65472, 8, 0, 65473, 8, 0, 65474, 8, 0, 65475, 13, 0, 65476, 13, 0, 65477, 13, 0, 65478, 13, 0, 65479, 15, 0, 65480, 13, 0, 65481, 8, 0, 65482, 38, 0, 130995, 21, 0, 130996, 8, 0, 130997, 13, 0, 130998, 13, 0, 130999, 13, 0, 131000, 13, 0, 131001, 13, 0, 131002, 13, 0, 131003, 13, 0, 131004, 13, 0, 131005, 13, 0, 131006, 13, 0, 131007, 13, 0, 131008, 8, 0, 131009, 8, 0, 131010, 8, 0, 131011, 13, 0, 131012, 13, 0, 131013, 13, 0, 131014, 13, 0, 131015, 13, 0, 131016, 13, 0, 131017, 8, 0, 131018, 23, 0, 196531, 38, 0, 196532, 8, 0, 196533, 13, 0, 196534, 13, 0, 196535, 13, 0, 196536, 13, 0, 196537, 13, 0, 196538, 13, 0, 196539, 13, 0, 196540, 13, 0, 196541, 13, 0, 196542, 13, 0, 196543, 13, 0, 196544, 8, 0, 196545, 8, 0, 196546, 8, 0, 196547, 13, 0, 196548, 13, 0, 196549, 13, 0, 196550, 13, 0, 196551, 13, 0, 196552, 13, 0, 196553, 8, 0, 196554, 38, 0, 262067, 21, 0, 262068, 8, 0, 262069, 13, 0, 262070, 13, 0, 262071, 13, 0, 262072, 13, 0, 262073, 13, 0, 262074, 13, 0, 262075, 13, 0, 262076, 13, 0, 262077, 13, 0, 262078, 13, 0, 262079, 13, 0, 262080, 8, 0, 262081, 38, 0, 262082, 8, 0, 262083, 8, 0, 262084, 13, 0, 262085, 13, 0, 262086, 8, 0, 262087, 8, 0, 262088, 8, 0, 262089, 8, 0, 262090, 23, 0, 327603, 38, 0, 327604, 8, 0, 327605, 13, 0, 327606, 13, 0, 327607, 13, 0, 327608, 13, 0, 327609, 13, 0, 327610, 13, 0, 327611, 13, 0, 327612, 13, 0, 327613, 13, 0, 327614, 13, 0, 327615, 13, 0, 327616, 8, 0, 327618, 37, 0, 327620, 13, 0, 327621, 13, 0, 327622, 37, 0, 327624, 37, 0, 327626, 38, 0, 393139, 21, 0, 393140, 8, 0, 393141, 13, 0, 393142, 13, 0, 393143, 13, 0, 393144, 13, 0, 393145, 13, 0, 393146, 13, 0, 393147, 13, 0, 393148, 13, 0, 393149, 13, 0, 393150, 13, 0, 393151, 13, 0, 393152, 8, 0, 393153, 38, 0, 393154, 19, 0, 393156, 13, 0, 393157, 13, 0, 393158, 19, 0, 393160, 19, 0, 393162, 23, 0, 458675, 38, 0, 458676, 8, 0, 458677, 13, 0, 458678, 13, 0, 458679, 13, 0, 458680, 13, 0, 458681, 13, 0, 458682, 13, 0, 458683, 13, 0, 458684, 13, 0, 458685, 13, 0, 458686, 13, 0, 458687, 13, 0, 458688, 8, 0, 458692, 13, 0, 458693, 13, 0, 458698, 38, 0, 524211, 21, 0, 524212, 8, 0, 524213, 13, 0, 524214, 13, 0, 524215, 13, 0, 524216, 13, 0, 524217, 13, 0, 524218, 13, 0, 524219, 13, 0, 524220, 13, 0, 524221, 13, 0, 524222, 13, 0, 524223, 13, 0, 524224, 8, 0, 524225, 38, 0, 524228, 13, 0, 524229, 13, 0, 524234, 23, 0, 589747, 38, 0, 589748, 8, 0, 589749, 13, 0, 589750, 13, 0, 589751, 13, 0, 589752, 13, 0, 589753, 13, 0, 589754, 13, 0, 589755, 13, 0, 589756, 13, 0, 589757, 13, 0, 589758, 13, 0, 589759, 13, 0, 589760, 8, 0, 589761, 38, 0, 589762, 8, 0, 589763, 8, 0, 589764, 13, 0, 589765, 13, 0, 589766, 8, 0, 589767, 8, 0, 589768, 8, 0, 589769, 8, 0, 589770, 38, 0, 655284, 8, 0, 655285, 8, 0, 655286, 8, 0, 655287, 8, 0, 655288, 13, 0, 655289, 13, 0, 655290, 8, 0, 655291, 8, 0, 655292, 8, 0, 655293, 8, 0, 655294, 8, 0, 655295, 8, 0, 655296, 8, 0, 655298, 8, 0, 655299, 13, 0, 655300, 13, 0, 655301, 13, 0, 655302, 13, 0, 655303, 13, 0, 655304, 13, 0, 655305, 8, 0, 720819, 38, 0, 720820, 37, 0, 720821, 33, 0, 720822, 37, 0, 720823, 20, 0, 720824, 13, 0, 720825, 13, 0, 720826, 37, 0, 720827, 20, 0, 720828, 37, 0, 720829, 20, 0, 720830, 37, 0, 720831, 20, 0, 720832, 37, 0, 720833, 20, 0, 720834, 8, 0, 720835, 13, 0, 720836, 13, 0, 720837, 13, 0, 720838, 13, 0, 720839, 13, 0, 720840, 13, 0, 720841, 8, 0, 720842, 38, 0, 786356, 19, 0, 786357, 21, 0, 786358, 19, 0, 786360, 13, 0, 786361, 13, 0, 786362, 19, 0, 786364, 19, 0, 786366, 19, 0, 786368, 19, 0, 786370, 8, 0, 786371, 13, 0, 786372, 13, 0, 786373, 13, 0, 786374, 13, 0, 786375, 13, 0, 786376, 13, 0, 786377, 8, 0, 851891, 38, 0, 851892, 23, 0, 851893, 21, 0, 851896, 13, 0, 851897, 13, 0, 851906, 8, 0, 851907, 13, 0, 851908, 13, 0, 851909, 13, 0, 851910, 13, 0, 851911, 13, 0, 851912, 13, 0, 851913, 8, 0, 851914, 38, 0, 917428, 23, 0, 917429, 21, 0, 917432, 13, 0, 917433, 13, 0, 917442, 8, 0, 917443, 13, 0, 917444, 13, 0, 917445, 13, 0, 917446, 13, 0, 917447, 13, 0, 917448, 13, 0, 917449, 8, 0, 982963, 38, 0, 982964, 8, 0, 982965, 8, 0, 982966, 8, 0, 982967, 8, 0, 982968, 13, 0, 982969, 13, 0, 982970, 8, 0, 982971, 8, 0, 982972, 8, 0, 982973, 8, 0, 982974, 8, 0, 982975, 8, 0, 982976, 8, 0, 982977, 8, 0, 982978, 8, 0, 982979, 13, 0, 982980, 13, 0, 982981, 13, 0, 982982, 13, 0, 982983, 13, 0, 982984, 13, 0, 982985, 8, 0, 982986, 38, 0, 1048500, 8, 0, 1048501, 13, 0, 1048502, 13, 0, 1048503, 13, 0, 1048504, 13, 0, 1048505, 13, 0, 1048506, 13, 0, 1048507, 13, 0, 1048508, 13, 0, 1048509, 13, 0, 1048510, 13, 0, 1048511, 13, 0, 1048512, 13, 0, 1048513, 13, 0, 1048514, 13, 0, 1048515, 13, 0, 1048516, 13, 0, 1048517, 13, 0, 1048518, 13, 0, 1048519, 13, 0, 1048520, 13, 0, 1048521, 8, 0, 1114035, 38, 0, 1114036, 8, 0, 1114037, 13, 0, 1114038, 13, 0, 1114039, 13, 0, 1114040, 13, 0, 1114041, 13, 0, 1114042, 13, 0, 1114043, 13, 0, 1114044, 13, 0, 1114045, 13, 0, 1114046, 13, 0, 1114047, 13, 0, 1114048, 13, 0, 1114049, 13, 0, 1114050, 13, 0, 1114051, 13, 0, 1114052, 13, 0, 1114053, 13, 0, 1114054, 13, 0, 1114055, 13, 0, 1114056, 13, 0, 1114057, 8, 0, 1114058, 38, 0, 1179572, 8, 0, 1179573, 13, 0, 1179574, 13, 0, 1179575, 13, 0, 1179576, 13, 0, 1179577, 13, 0, 1179578, 13, 0, 1179579, 13, 0, 1179580, 13, 0, 1179581, 13, 0, 1179582, 13, 0, 1179583, 13, 0, 1179584, 13, 0, 1179585, 13, 0, 1179586, 13, 0, 1179587, 13, 0, 1179588, 13, 0, 1179589, 13, 0, 1179590, 13, 0, 1179591, 13, 0, 1179592, 13, 0, 1179593, 8, 0, 1245107, 38, 0, 1245108, 8, 0, 1245109, 13, 0, 1245110, 13, 0, 1245111, 13, 0, 1245112, 13, 0, 1245113, 13, 0, 1245114, 13, 0, 1245115, 13, 0, 1245116, 13, 0, 1245117, 13, 0, 1245118, 13, 0, 1245119, 13, 0, 1245120, 13, 0, 1245121, 13, 0, 1245122, 13, 0, 1245123, 13, 0, 1245124, 13, 0, 1245125, 13, 0, 1245126, 13, 0, 1245127, 13, 0, 1245128, 13, 0, 1245129, 8, 0, 1245130, 38, 0, 1310644, 8, 0, 1310645, 13, 0, 1310646, 13, 0, 1310647, 13, 0, 1310648, 13, 0, 1310649, 13, 0, 1310650, 13, 0, 1310651, 13, 0, 1310652, 13, 0, 1310653, 13, 0, 1310654, 13, 0, 1310655, 13, 0, 1310656, 13, 0, 1310657, 13, 0, 1310658, 13, 0, 1310659, 13, 0, 1310660, 13, 0, 1310661, 13, 0, 1310662, 13, 0, 1310663, 13, 0, 1310664, 13, 0, 1310665, 8, 0, 1376179, 38, 0, 1376180, 8, 0, 1376181, 8, 0, 1376182, 8, 0, 1376183, 8, 0, 1376184, 8, 0, 1376185, 8, 0, 1376186, 8, 0, 1376187, 8, 0, 1376188, 8, 0, 1376189, 8, 0, 1376190, 13, 0, 1376191, 13, 0, 1376192, 8, 0, 1376193, 8, 0, 1376194, 8, 0, 1376195, 8, 0, 1376196, 8, 0, 1376197, 8, 0, 1376198, 8, 0, 1376199, 8, 0, 1376200, 8, 0, 1376201, 8, 0, 1376202, 38, 0, 1441716, 37, 0, 1441718, 37, 0, 1441720, 37, 0, 1441722, 37, 0, 1441724, 37, 0, 1441726, 13, 0, 1441727, 13, 0, 1441728, 37, 0, 1441730, 37, 0, 1441732, 37, 0, 1441734, 37, 0, 1441736, 37, 0, 1507251, 40, 0, 1507252, 19, 0, 1507254, 19, 0, 1507256, 19, 0, 1507258, 19, 0, 1507260, 19, 0, 1507262, 13, 0, 1507263, 13, 0, 1507264, 19, 0, 1507266, 19, 0, 1507268, 19, 0, 1507270, 19, 0, 1507272, 19, 0, 1507274, 41, 0, 1572797, 20, 0, 1572798, 13, 0, 1572799, 13, 0, 1572807, 20, 0, 1638334, 13, 0, 1638335, 13, 0, 1703859, 11, 0, 1703860, 11, 0, 1703861, 11, 0, 1703862, 11, 0, 1703863, 11, 0, 1703864, 11, 0, 1703865, 11, 0, 1703866, 11, 0, 1703867, 11, 0, 1703868, 11, 0, 1703869, 11, 0, 1703870, 13, 0, 1703871, 13, 0, 1703872, 11, 0, 1703873, 11, 0, 1703874, 11, 0, 1703875, 11, 0, 1703876, 11, 0, 1703877, 11, 0, 1703878, 11, 0, 1703879, 11, 0, 1703880, 11, 0, 1703881, 11, 0, 1703882, 11, 0, 1769395, 16, 0, 1769396, 16, 0, 1769397, 16, 0, 1769398, 16, 0, 1769399, 16, 0, 1769400, 16, 0, 1769401, 16, 0, 1769402, 16, 0, 1769403, 16, 0, 1769404, 16, 0, 1769405, 16, 0, 1769406, 13, 0, 1769407, 13, 0, 1769408, 16, 0, 1769409, 16, 0, 1769410, 16, 0, 1769411, 16, 0, 1769412, 16, 0, 1769413, 16, 0, 1769414, 16, 0, 1769415, 16, 0, 1769416, 16, 0, 1769417, 16, 0, 1769418, 16, 0, 1834942, 13, 0, 1834943, 13, 0, 1900478, 13, 0, 1900479, 13, 0, 2097078, 13, 0, 2097079, 13, 0, 2097080, 13, 0, 2097081, 13, 0, 2097082, 13, 0, 2097083, 13, 0, 2097084, 13, 0, 2097085, 13, 0, 2097086, 13, 0, 2097087, 13, 0, 2162614, 13, 0, 2162615, 13, 0, 2162616, 13, 0, 2162617, 13, 0, 2162618, 13, 0, 2162619, 13, 0, 2162620, 13, 0, 2162621, 13, 0, 2162622, 13, 0, 2162623, 13, 0, 2228150, 11, 0, 2228151, 11, 0, 2228152, 11, 0, 2228153, 11, 0, 2228154, 11, 0, 2228155, 11, 0, 2228156, 11, 0, 2228157, 11, 0, 2228158, 11, 0, 2228159, 11, 0, 2293686, 16, 0, 2293687, 16, 0, 2293688, 16, 0, 2293689, 16, 0, 2293690, 16, 0, 2293691, 16, 0, 2293692, 16, 0, 2293693, 16, 0, 2293694, 16, 0, 2293695, 16, 0, 2424756, 13, 0, 2424757, 13, 0, 2490292, 13, 0, 2490293, 13, 0, 2555828, 13, 0, 2555829, 13, 0, 2555830, 13, 0, 2555831, 13, 0, 2555832, 13, 0, 2555833, 13, 0, 2555834, 13, 0, 2555835, 13, 0, 2555836, 13, 0, 2555837, 13, 0, 2555838, 13, 0, 2555839, 13, 0, 2621364, 13, 0, 2621365, 13, 0, 2621366, 13, 0, 2621367, 13, 0, 2621368, 13, 0, 2621369, 13, 0, 2621370, 13, 0, 2621371, 13, 0, 2621372, 13, 0, 2621373, 13, 0, 2621374, 13, 0, 2621375, 13, 0, 2686900, 11, 0, 2686901, 11, 0, 2686902, 11, 0, 2686903, 11, 0, 2686904, 11, 0, 2686905, 11, 0, 2686906, 11, 0, 2686907, 11, 0, 2686908, 11, 0, 2686909, 11, 0, 2686910, 11, 0, 2686911, 11, 0, 2752436, 16, 0, 2752437, 16, 0, 2752438, 16, 0, 2752439, 16, 0, 2752440, 16, 0, 2752441, 16, 0, 2752442, 16, 0, 2752443, 16, 0, 2752444, 16, 0, 2752445, 16, 0, 2752446, 17, 0, 2752447, 17, 0, 3145647, 38, 0, 3145648, 37, 0, 3145650, 37, 0, 3145654, 37, 0, 3145656, 37, 0, 3145658, 37, 0, 3145660, 37, 0, 3145662, 37, 0, 3145664, 37, 0, 3145666, 38, 0, 3211184, 19, 0, 3211186, 19, 0, 3211190, 19, 0, 3211192, 19, 0, 3211194, 19, 0, 3211196, 19, 0, 3211198, 19, 0, 3211200, 19, 0, 3276719, 38, 0, 3276738, 38, 0, 3407791, 38, 0, 3407792, 8, 0, 3407793, 8, 0, 3407794, 8, 0, 3407795, 8, 0, 3407796, 8, 0, 3407797, 8, 0, 3407798, 8, 0, 3407799, 8, 0, 3407800, 8, 0, 3407801, 8, 0, 3407802, 8, 0, 3407803, 8, 0, 3407804, 8, 0, 3407805, 8, 0, 3407806, 8, 0, 3407807, 8, 0, 3407808, 8, 0, 3407809, 8, 0, 3407810, 38, 0, 3473328, 8, 0, 3473329, 13, 0, 3473330, 13, 0, 3473331, 13, 0, 3473332, 13, 0, 3473333, 13, 0, 3473334, 13, 0, 3473335, 13, 0, 3473336, 13, 0, 3473337, 13, 0, 3473338, 13, 0, 3473339, 13, 0, 3473340, 13, 0, 3473341, 13, 0, 3473342, 13, 0, 3473343, 13, 0, 3473344, 13, 0, 3473345, 8, 0, 3538863, 38, 0, 3538864, 8, 0, 3538865, 13, 0, 3538866, 13, 0, 3538867, 13, 0, 3538868, 13, 0, 3538869, 13, 0, 3538870, 13, 0, 3538871, 13, 0, 3538872, 13, 0, 3538873, 13, 0, 3538874, 13, 0, 3538875, 13, 0, 3538876, 13, 0, 3538877, 13, 0, 3538878, 13, 0, 3538879, 13, 0, 3538880, 13, 0, 3538881, 8, 0, 3538882, 38, 0, 3604400, 8, 0, 3604401, 13, 0, 3604402, 13, 0, 3604403, 13, 0, 3604404, 13, 0, 3604405, 13, 0, 3604406, 13, 0, 3604407, 13, 0, 3604408, 13, 0, 3604409, 13, 0, 3604410, 13, 0, 3604411, 13, 0, 3604412, 13, 0, 3604413, 13, 0, 3604414, 13, 0, 3604415, 13, 0, 3604416, 13, 0, 3604417, 8, 0, 3669935, 38, 0, 3669936, 8, 0, 3669937, 13, 0, 3669938, 13, 0, 3669939, 13, 0, 3669940, 13, 0, 3669941, 13, 0, 3669942, 13, 0, 3669943, 13, 0, 3669944, 13, 0, 3669945, 13, 0, 3669946, 13, 0, 3669947, 13, 0, 3669948, 13, 0, 3669949, 13, 0, 3669950, 13, 0, 3669951, 13, 0, 3669952, 13, 0, 3669953, 8, 0, 3669954, 38, 0, 3735472, 8, 0, 3735473, 13, 0, 3735474, 13, 0, 3735475, 13, 0, 3735476, 13, 0, 3735477, 13, 0, 3735478, 13, 0, 3735479, 13, 0, 3735480, 13, 0, 3735481, 13, 0, 3735482, 13, 0, 3735483, 13, 0, 3735484, 13, 0, 3735485, 13, 0, 3735486, 13, 0, 3735487, 13, 0, 3735488, 13, 0, 3735489, 8, 0, 3801007, 38, 0, 3801008, 8, 0, 3801009, 13, 0, 3801010, 13, 0, 3801011, 13, 0, 3801012, 13, 0, 3801013, 13, 0, 3801014, 13, 0, 3801015, 13, 0, 3801016, 13, 0, 3801017, 13, 0, 3801018, 13, 0, 3801019, 13, 0, 3801020, 13, 0, 3801021, 13, 0, 3801022, 13, 0, 3801023, 13, 0, 3801024, 13, 0, 3801025, 8, 0, 3801026, 38, 0, 3866544, 8, 0, 3866545, 13, 0, 3866546, 13, 0, 3866547, 13, 0, 3866548, 13, 0, 3866549, 13, 0, 3866550, 13, 0, 3866551, 13, 0, 3866552, 13, 0, 3866553, 13, 0, 3866554, 13, 0, 3866555, 13, 0, 3866556, 13, 0, 3866557, 13, 0, 3866558, 13, 0, 3866559, 13, 0, 3866560, 13, 0, 3866561, 8, 0, 3932079, 38, 0, 3932080, 8, 0, 3932081, 8, 0, 3932082, 8, 0, 3932083, 8, 0, 3932084, 8, 0, 3932085, 8, 0, 3932086, 8, 0, 3932087, 8, 0, 3932088, 8, 0, 3932089, 8, 0, 3932090, 8, 0, 3932091, 8, 0, 3932092, 8, 0, 3932093, 8, 0, 3932094, 8, 0, 3932095, 8, 0, 3932096, 8, 0, 3932097, 8, 0, 3932098, 38, 0, 3997616, 37, 0, 3997618, 37, 0, 3997620, 37, 0, 3997622, 37, 0, 3997624, 37, 0, 3997626, 37, 0, 3997628, 37, 0, 3997630, 37, 0, 3997632, 37, 0, 4063151, 40, 0, 4063152, 19, 0, 4063154, 19, 0, 4063156, 19, 0, 4063158, 19, 0, 4063160, 19, 0, 4063162, 19, 0, 4063164, 19, 0, 4063166, 19, 0, 4063168, 19, 0, 4063170, 41, 0, 4259759, 11, 0, 4259760, 11, 0, 4259761, 11, 0, 4259762, 11, 0, 4259763, 11, 0, 4259764, 11, 0, 4259765, 11, 0, 4259766, 11, 0, 4259767, 11, 0, 4259768, 11, 0, 4259769, 11, 0, 4259770, 11, 0, 4259771, 11, 0, 4259772, 11, 0, 4259773, 11, 0, 4259774, 11, 0, 4259775, 11, 0, 4259776, 11, 0, 4259777, 11, 0, 4259778, 11, 0, 4325295, 17, 0, 4325296, 17, 0, 4325297, 17, 0, 4325298, 17, 0, 4325299, 17, 0, 4325300, 17, 0, 4325301, 17, 0, 4325302, 17, 0, 4325303, 17, 0, 4325304, 17, 0, 4325305, 17, 0, 4325306, 17, 0, 4325307, 17, 0, 4325308, 17, 0, 4325309, 17, 0, 4325310, 17, 0, 4325311, 17, 0, 4325312, 17, 0, 4325313, 17, 0, 4325314, 17, 0 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 196, 280 )
+scale = Vector2( 500.5, 301 )
+z_index = -4096
+texture = ExtResource( 16 )
+
+[node name="LookingGlass" parent="." instance=ExtResource( 5 )]
+
+[node name="Key3FloorSwitch" parent="." instance=ExtResource( 13 )]
+position = Vector2( -904, 8 )
+isReal = false
+
+[node name="IllusoryForwardWall" parent="." instance=ExtResource( 12 )]
+position = Vector2( -1200, 784 )
+
+[node name="HiddenFloorSwitch" parent="." instance=ExtResource( 14 )]
+position = Vector2( -984, 600 )
+
+[node name="HiddenFloorSwitch2" parent="." instance=ExtResource( 14 )]
+position = Vector2( -984, 632 )
+
+[node name="HiddenFloorSwitch23" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1064, 440 )
+
+[node name="HiddenFloorSwitch24" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1064, 456 )
+
+[node name="HiddenFloorSwitch25" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1080, 440 )
+
+[node name="HiddenFloorSwitch26" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1080, 456 )
+
+[node name="HiddenFloorSwitch27" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1096, 456 )
+
+[node name="HiddenFloorSwitch28" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1096, 440 )
+
+[node name="HiddenFloorSwitch29" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1112, 440 )
+
+[node name="HiddenFloorSwitch30" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1112, 456 )
+
+[node name="HiddenFloorSwitch31" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1112, 472 )
+
+[node name="HiddenFloorSwitch32" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1112, 488 )
+
+[node name="HiddenFloorSwitch33" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1096, 488 )
+
+[node name="HiddenFloorSwitch34" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1096, 472 )
+
+[node name="HiddenFloorSwitch19" parent="." instance=ExtResource( 14 )]
+position = Vector2( -968, 600 )
+
+[node name="HiddenFloorSwitch20" parent="." instance=ExtResource( 14 )]
+position = Vector2( -968, 584 )
+
+[node name="HiddenFloorSwitch21" parent="." instance=ExtResource( 14 )]
+position = Vector2( -984, 568 )
+
+[node name="HiddenFloorSwitch22" parent="." instance=ExtResource( 14 )]
+position = Vector2( -984, 584 )
+
+[node name="HiddenFloorSwitch3" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1000, 616 )
+
+[node name="HiddenFloorSwitch4" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1000, 632 )
+
+[node name="HiddenFloorSwitch5" parent="." instance=ExtResource( 14 )]
+position = Vector2( -984, 616 )
+
+[node name="HiddenFloorSwitch6" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1016, 632 )
+
+[node name="HiddenFloorSwitch13" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1208, 680 )
+
+[node name="HiddenFloorSwitch35" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1208, 664 )
+
+[node name="HiddenFloorSwitch14" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1192, 680 )
+
+[node name="HiddenFloorSwitch36" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1192, 664 )
+
+[node name="HiddenFloorSwitch15" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1192, 696 )
+
+[node name="HiddenFloorSwitch16" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1208, 696 )
+
+[node name="HiddenFloorSwitch17" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1208, 712 )
+
+[node name="HiddenFloorSwitch37" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1208, 760 )
+
+[node name="HiddenFloorSwitch38" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1208, 776 )
+
+[node name="HiddenFloorSwitch39" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1208, 792 )
+
+[node name="HiddenFloorSwitch40" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1208, 808 )
+
+[node name="HiddenFloorSwitch41" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1192, 808 )
+
+[node name="HiddenFloorSwitch42" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1192, 792 )
+
+[node name="HiddenFloorSwitch43" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1192, 776 )
+
+[node name="HiddenFloorSwitch44" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1192, 760 )
+
+[node name="HiddenFloorSwitch18" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1192, 712 )
+
+[node name="HiddenFloorSwitch67" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1192, 728 )
+
+[node name="HiddenFloorSwitch68" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1208, 728 )
+
+[node name="HiddenFloorSwitch69" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1208, 744 )
+
+[node name="HiddenFloorSwitch70" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1192, 744 )
+
+[node name="HiddenFloorSwitch7" parent="." instance=ExtResource( 14 )]
+position = Vector2( -968, 616 )
+
+[node name="HiddenFloorSwitch8" parent="." instance=ExtResource( 14 )]
+position = Vector2( -968, 632 )
+
+[node name="HiddenFloorSwitch9" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1016, 616 )
+
+[node name="HiddenFloorSwitch10" parent="." instance=ExtResource( 14 )]
+position = Vector2( -968, 568 )
+
+[node name="HiddenFloorSwitch55" parent="." instance=ExtResource( 14 )]
+position = Vector2( -968, 552 )
+
+[node name="HiddenFloorSwitch56" parent="." instance=ExtResource( 14 )]
+position = Vector2( -984, 536 )
+
+[node name="HiddenFloorSwitch57" parent="." instance=ExtResource( 14 )]
+position = Vector2( -984, 552 )
+
+[node name="HiddenFloorSwitch58" parent="." instance=ExtResource( 14 )]
+position = Vector2( -968, 536 )
+
+[node name="HiddenFloorSwitch59" parent="." instance=ExtResource( 14 )]
+position = Vector2( -968, 520 )
+
+[node name="HiddenFloorSwitch60" parent="." instance=ExtResource( 14 )]
+position = Vector2( -984, 504 )
+
+[node name="HiddenFloorSwitch61" parent="." instance=ExtResource( 14 )]
+position = Vector2( -984, 520 )
+
+[node name="HiddenFloorSwitch62" parent="." instance=ExtResource( 14 )]
+position = Vector2( -968, 504 )
+
+[node name="HiddenFloorSwitch63" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1000, 520 )
+
+[node name="HiddenFloorSwitch64" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1016, 504 )
+
+[node name="HiddenFloorSwitch65" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1016, 520 )
+
+[node name="HiddenFloorSwitch66" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1000, 504 )
+
+[node name="HiddenFloorSwitch45" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1048, 568 )
+illusory = true
+
+[node name="HiddenFloorSwitch46" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1048, 600 )
+illusory = true
+
+[node name="HiddenFloorSwitch47" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1032, 568 )
+illusory = true
+
+[node name="HiddenFloorSwitch48" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1032, 552 )
+illusory = true
+
+[node name="HiddenFloorSwitch49" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1048, 536 )
+illusory = true
+
+[node name="HiddenFloorSwitch50" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1048, 552 )
+illusory = true
+
+[node name="HiddenFloorSwitch51" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1048, 584 )
+illusory = true
+
+[node name="HiddenFloorSwitch52" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1032, 584 )
+illusory = true
+
+[node name="HiddenFloorSwitch53" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1032, 600 )
+illusory = true
+
+[node name="HiddenFloorSwitch54" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1032, 536 )
+illusory = true
+
+[node name="HiddenFloorSwitch71" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1032, 488 )
+illusory = true
+
+[node name="HiddenFloorSwitch72" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1048, 472 )
+illusory = true
+
+[node name="HiddenFloorSwitch73" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1048, 488 )
+illusory = true
+
+[node name="HiddenFloorSwitch74" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1032, 472 )
+illusory = true
+
+[node name="HiddenFloorSwitch11" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1192, 648 )
+
+[node name="HiddenFloorSwitch12" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1208, 648 )
+
+[node name="IllusorySideWall" parent="." instance=ExtResource( 9 )]
+position = Vector2( -1000, 0 )
+
+[node name="IllusoryCWFloorPowerLineEight10" parent="." instance=ExtResource( 11 )]
+position = Vector2( -968, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight21" parent="." instance=ExtResource( 11 )]
+position = Vector2( -952, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight22" parent="." instance=ExtResource( 11 )]
+position = Vector2( -936, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight23" parent="." instance=ExtResource( 11 )]
+position = Vector2( -920, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight24" parent="." instance=ExtResource( 11 )]
+position = Vector2( -904, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight11" parent="." instance=ExtResource( 11 )]
+position = Vector2( -984, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight12" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1000, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight13" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1016, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight14" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1032, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight15" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1048, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight16" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1064, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight17" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1080, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight18" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1096, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight19" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1112, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight20" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1128, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineEight2" parent="." instance=ExtResource( 11 )]
+position = Vector2( -920, 8 )
+
+[node name="IllusoryCWFloorPowerLineEight3" parent="." instance=ExtResource( 11 )]
+position = Vector2( -936, 8 )
+
+[node name="IllusoryCWFloorPowerLineEight4" parent="." instance=ExtResource( 11 )]
+position = Vector2( -952, 8 )
+
+[node name="IllusoryCWFloorPowerLineEight5" parent="." instance=ExtResource( 11 )]
+position = Vector2( -968, 8 )
+
+[node name="IllusoryCWFloorPowerLineEight6" parent="." instance=ExtResource( 11 )]
+position = Vector2( -984, 8 )
+
+[node name="IllusoryCWFloorPowerLineEight7" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1000, 8 )
+
+[node name="IllusoryCWFloorPowerLineEight8" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1016, 8 )
+
+[node name="IllusoryCWFloorPowerLineEight9" parent="." instance=ExtResource( 11 )]
+position = Vector2( -1032, 8 )
+
+[node name="IllusoryCWFloorPowerLineFour6" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1144, 232 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineFour2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1048, -8 )
+
+[node name="IllusoryCWFloorPowerLineFour3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1048, -24 )
+
+[node name="IllusoryCWFloorPowerLineFour4" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1048, -40 )
+
+[node name="IllusoryCWFloorPowerLineFour5" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1048, -56 )
+
+[node name="IllusoryCWFloorPowerLineNine2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -888, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineSeven3" parent="." instance=ExtResource( 15 )]
+position = Vector2( -1144, 248 )
+isReal = true
+
+[node name="IllusoryCWFloorPowerLineSeven2" parent="." instance=ExtResource( 15 )]
+position = Vector2( -1048, 8 )
+
+[node name="IllusoryCCWFloorPowerLineFour2" parent="." instance=ExtResource( 10 )]
+position = Vector2( -888, 168 )
+isReal = true
+
+[node name="IllusoryCCWFloorPowerLineFour3" parent="." instance=ExtResource( 10 )]
+position = Vector2( -888, 184 )
+isReal = true
+
+[node name="IllusoryCCWFloorPowerLineFour4" parent="." instance=ExtResource( 10 )]
+position = Vector2( -888, 200 )
+isReal = true
+
+[node name="IllusoryCCWFloorPowerLineFour5" parent="." instance=ExtResource( 10 )]
+position = Vector2( -888, 216 )
+isReal = true
+
+[node name="IllusoryCCWFloorPowerLineFour6" parent="." instance=ExtResource( 10 )]
+position = Vector2( -888, 232 )
+isReal = true
+
+[node name="IllusoryPoweredDoor" parent="." instance=ExtResource( 7 )]
+position = Vector2( -1136, 192 )
+hasWall = false
+isReal = true
+
+[node name="IllusoryPoweredDoor2" parent="." instance=ExtResource( 7 )]
+position = Vector2( -1040, -96 )
+
+[node name="Lever" parent="." instance=ExtResource( 6 )]
+position = Vector2( -944, -96 )
+
+[node name="IllusoryForwardWall2" parent="." instance=ExtResource( 12 )]
+position = Vector2( -944, 96 )
+illusory = false
+
+[node name="IllusoryForwardWall3" parent="." instance=ExtResource( 12 )]
+position = Vector2( -1040, -176 )
+illusory = false
+
+[node name="Key4FloorSwitch" parent="." instance=ExtResource( 4 )]
+position = Vector2( -888, 152 )
+
+[node name="InvisibleWall" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1176, 696 )
+scale = Vector2( 1, 7 )
+
+[node name="InvisibleWall2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1224, 656 )
+scale = Vector2( 1, 12 )
+
+[node name="InvisibleWall9" parent="." instance=ExtResource( 2 )]
+position = Vector2( -952, 568 )
+scale = Vector2( 1, 9 )
+
+[node name="InvisibleWall3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1056, 648 )
+rotation = 1.5708
+scale = Vector2( 1, 14 )
+
+[node name="InvisibleWall4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1120, 600 )
+rotation = 1.5708
+scale = Vector2( 1, 8 )
+
+[node name="InvisibleWall18" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1120, 536 )
+rotation = 1.5708
+scale = Vector2( 1, 8 )
+
+[node name="InvisibleWall5" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1192, 568 )
+rotation = 1.5708
+scale = Vector2( 1, 3 )
+
+[node name="InvisibleWall19" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1192, 520 )
+scale = Vector2( 1, 3 )
+
+[node name="InvisibleWall17" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1168, 488 )
+rotation = 1.5708
+scale = Vector2( 1, 4 )
+
+[node name="InvisibleWall16" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1072, 480 )
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+
+[node name="InvisibleWall7" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1008, 600 )
+rotation = 1.5708
+scale = Vector2( 1, 2 )
+
+[node name="InvisibleWall10" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1008, 536 )
+rotation = 1.5708
+scale = Vector2( 1, 2 )
+
+[node name="InvisibleWall8" parent="." instance=ExtResource( 2 )]
+position = Vector2( -984, 488 )
+rotation = 1.5708
+scale = Vector2( 1, 5 )
+
+[node name="InvisibleWall6" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1176, 584 )
+rotation = 1.5708
+
+[node name="InvisibleWall14" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1064, 408 )
+rotation = 1.5708
+
+[node name="InvisibleWall11" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1000, 568 )
+scale = Vector2( 1, 3 )
+
+[node name="InvisibleWall12" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1128, 456 )
+scale = Vector2( 1, 5 )
+
+[node name="InvisibleWall15" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1016, 440 )
+scale = Vector2( 1, 5 )
+
+[node name="InvisibleWall13" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1088, 424 )
+scale = Vector2( 4, 1 )
