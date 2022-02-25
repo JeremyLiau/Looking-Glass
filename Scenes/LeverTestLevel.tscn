@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Lever.tscn" type="PackedScene" id=2]
@@ -11,7 +11,6 @@
 [ext_resource path="res://Sprites/RoughDungeonSprSheet.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineFour.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineNine.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineOne.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineSeven.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineSix.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineThree.tscn" type="PackedScene" id=15]
@@ -330,7 +329,11 @@ position = Vector2( 240, 64 )
 position = Vector2( 304, 160 )
 
 [node name="IllusoryPoweredDoor" parent="." instance=ExtResource( 4 )]
-position = Vector2( 464, 176 )
+position = Vector2( 160, 32 )
+
+[node name="IllusoryPoweredDoor2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 112, 32 )
+hasWall = false
 
 [node name="IllusoryFloorTile" parent="." instance=ExtResource( 5 )]
 position = Vector2( 440, 168 )
@@ -342,28 +345,37 @@ position = Vector2( 440, 224 )
 position = Vector2( 464, 240 )
 
 [node name="IllusoryCWFloorPowerLineEight" parent="." instance=ExtResource( 8 )]
-position = Vector2( 376, 88 )
+position = Vector2( 320, 112 )
 
 [node name="IllusoryCWFloorPowerLineFour" parent="." instance=ExtResource( 10 )]
-position = Vector2( 360, 72 )
+position = Vector2( 152, 136 )
+
+[node name="IllusoryCWFloorPowerLineFour2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 152, 120 )
+
+[node name="IllusoryCWFloorPowerLineFour3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 152, 104 )
+
+[node name="IllusoryCWFloorPowerLineFour4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 152, 88 )
+
+[node name="IllusoryCWFloorPowerLineFour5" parent="." instance=ExtResource( 10 )]
+position = Vector2( 152, 72 )
 
 [node name="IllusoryCWFloorPowerLineNine" parent="." instance=ExtResource( 11 )]
-position = Vector2( 392, 88 )
-
-[node name="IllusoryCWFloorPowerLineOne" parent="." instance=ExtResource( 12 )]
-position = Vector2( 360, 56 )
+position = Vector2( 328, 24 )
 
 [node name="IllusoryCWFloorPowerLineSeven" parent="." instance=ExtResource( 13 )]
-position = Vector2( 360, 88 )
+position = Vector2( 152, 152 )
 
 [node name="IllusoryCWFloorPowerLineSix" parent="." instance=ExtResource( 14 )]
-position = Vector2( 392, 72 )
+position = Vector2( 304, 112 )
 
 [node name="IllusoryCWFloorPowerLineThree" parent="." instance=ExtResource( 15 )]
-position = Vector2( 392, 56 )
+position = Vector2( 304, 96 )
 
 [node name="IllusoryCWFloorPowerLineTwo" parent="." instance=ExtResource( 16 )]
-position = Vector2( 376, 56 )
+position = Vector2( 304, 80 )
 
 [node name="IllusoryCCWFloorPowerLineEight" parent="." instance=ExtResource( 22 )]
 position = Vector2( 440, 88 )

@@ -1,8 +1,9 @@
-[gd_scene load_steps=126 format=2]
+[gd_scene load_steps=128 format=2]
 
 [ext_resource path="res://Sprites/SingleLinePoweredDoorSprSheet.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/SingleLineUnpoweredDoorSprSheet.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/IllusoryPoweredDoor.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/StandardWall.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
@@ -503,9 +504,13 @@ extents = Vector2( 16, 8 )
 [sub_resource type="RectangleShape2D" id=122]
 extents = Vector2( 16, 32 )
 
+[sub_resource type="RectangleShape2D" id=123]
+extents = Vector2( 16, 8 )
+
 [node name="IllusoryPoweredDoor" type="Area2D" groups=["Toggle"]]
 z_index = 1
 script = ExtResource( 3 )
+hasWall = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
@@ -531,6 +536,16 @@ collision_mask = 8
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="FadeArea"]
 shape = SubResource( 122 )
+
+[node name="WallSprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 4 )
+
+[node name="WallCollision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallCollision"]
+position = Vector2( 0, 24 )
+shape = SubResource( 123 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="area_entered" from="FadeArea" to="." method="_on_FadeArea_area_entered"]

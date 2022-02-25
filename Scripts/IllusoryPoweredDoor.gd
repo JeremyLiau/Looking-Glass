@@ -7,14 +7,27 @@ onready var tween = get_node("Tween")
 var illusory = true
 var lookingGlassed = false #Terrible name, but essentially means that the looking glass is hovering over the object. This is checked to make sure that the lookingGlass fade effect takes precedence over the half-fade when the player stands behind an object
 var playerBehind = false #One last check to fix visual clarity. Ensure that the fade remains at half-fade if the looking glass is removed while the player stands behind the object.
+export var hasWall = false
+onready var wallSpr = $WallSprite
+onready var wallCollision = $WallCollision/CollisionShape2D
+
+func _ready():
+	if(hasWall):
+		wallCollision.disabled = false
+		wallSpr.visible = true
+	else:
+		wallCollision.disabled = true
+		wallSpr.visible = false
 
 func on_interact():
 	if(!illusory):
 		if(!activated):
 			activated = true
+			wallSpr.visible = false
 			anim.play("activated")
 		else:
 			activated = false
+			wallSpr.visible = true
 			collisionShape.disabled = false
 			anim.play("deactivated")
 
@@ -29,16 +42,27 @@ func _on_FadeArea_area_entered(area):
 				tweenEffect(1, 0)
 		else:
 				lookingGlassed = true
-				if(playerBehind):
+				if(playerBehind and !activated):
 					tweenEffect(0, 0.5)
 				else:
 					tweenEffect(0, 1)
+		if(hasWall and illusory):
+			if(playerBehind):
+				tween.interpolate_property(wallSpr, "modulate",
+				Color(1,1,1,0), Color(1,1,1,0.5), .2,
+				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+				tween.start()
+			else:
+				tween.interpolate_property(wallSpr, "modulate",
+				Color(1,1,1,0), Color(1,1,1,1), .2,
+				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+				tween.start()
 
 func _on_FadeArea_area_exited(area):
 	if area.get_name() == "LookingGlass":
 		if(illusory):
 			lookingGlassed = false
-			if(playerBehind):
+			if(playerBehind and !activated):
 				tweenEffect(0, 0.5)
 			else:
 				tweenEffect(0, 1)
@@ -48,36 +72,68 @@ func _on_FadeArea_area_exited(area):
 				tweenEffect(0.5, 0)
 			else:
 				tweenEffect(1, 0)
+		if(hasWall and illusory):
+			tween.interpolate_property(wallSpr, "modulate",
+			Color(1,1,1,1), Color(1,1,1,0), .2,
+			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			tween.start()
 
 func _on_FadeArea_body_entered(body):
 	playerBehind = true
 	if body.get_name() == "Player":
-		if(illusory and !lookingGlassed):
-			tweenEffect(1, 0.5)
-		elif(!illusory and lookingGlassed):
-			tweenEffect(1, 0.5)
+		if(!activated):
+			if(illusory and !lookingGlassed):
+				tweenEffect(1, 0.5)
+			elif(!illusory and lookingGlassed):
+				tweenEffect(1, 0.5)
+			elif(illusory and lookingGlassed and hasWall):
+				tweenEffect(1,0)
+				tween.interpolate_property(wallSpr, "modulate",
+				Color(1,1,1,1), Color(1,1,1,0.5), .2,
+				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+				tween.start()
 
 func _on_FadeArea_body_exited(body):
 	playerBehind = false
-	if(illusory and !lookingGlassed) or (!illusory and lookingGlassed):
+	if(illusory and lookingGlassed and hasWall):
+		tween.interpolate_property(wallSpr, "modulate",
+		Color(1,1,1,0.5), Color(1,1,1,1), .2,
+		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		tween.start()
+	elif(illusory and !lookingGlassed) or (!illusory and lookingGlassed): #Not certain if this is elif, but was if previously
 		if body.get_name() == "Player":
-			tweenEffect(0.5, 1)
+			if(!activated):
+				tweenEffect(0.5, 1)
 
 func illusion_toggle():
 	if(illusory):
 		illusory = false
+		if(hasWall and !activated):
+			wallCollision.disabled = true
 		if(!lookingGlassed):
 			tweenEffect(1, 0)
 		else:
 			tweenEffect(0, 1)
-		collisionShape.disabled = true
+			tween.interpolate_property(wallSpr, "modulate",
+			Color(1,1,1,1), Color(1,1,1,0), .2,
+			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			tween.start()
+		if(!activated):
+			collisionShape.disabled = false
 	else:
 		illusory = true
+		if(hasWall and !activated):
+			wallCollision.disabled = false
 		if(!lookingGlassed):
 			tweenEffect(0, 1)
 		else:
 			tweenEffect(1, 0)
-		collisionShape.disabled = false
+			tween.interpolate_property(wallSpr, "modulate",
+			Color(1,1,1,0), Color(1,1,1,1), .2,
+			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			tween.start()
+		if(!activated):
+			collisionShape.disabled = true
 
 func tweenEffect(from, to):
 	tween.interpolate_property(anim, "modulate",
