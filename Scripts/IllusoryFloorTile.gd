@@ -1,9 +1,17 @@
 extends Node2D
 
 onready var tween = get_node("Tween")
-var illusory = true
+var illusory = false
 onready var collisionShape = $StaticBody2D/CollisionShape2D
 var lookingGlassed = false  #Terrible name, but essentially means that the looking glass is hovering over the object. This is used in the illusion toggle to retain visual when hovered with looking glass while toggling
+
+func _ready():
+	if(illusory):
+		collisionShape.disabled = false
+		$Sprite.modulate = Color(1,1,1,1)
+	else:
+		collisionShape.disabled = true
+		$Sprite.modulate = Color(1,1,1,0)
 
 func _on_Area2D_area_entered(area):
 	if area.get_name() == "LookingGlass":
