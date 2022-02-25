@@ -13,12 +13,13 @@ var westDir = Vector2(-1, 0)
 
 var interactDist : int = 32
 
-export var illusory = true
+export var isReal = true # No toggle between illusory and non-illusory
+export var illusory = true #Toggle exists between illusory and non-illusory, if true, start as an illusory object
 onready var tween = get_node("Tween")
 var lookingGlassed = false #Terrible name, but essentially means that the looking glass is hovering over the object. This is used in the illusion toggle to retain visual when hovered with looking glass while toggling
 
 func _on_Area2D_body_entered(body):
-	if(!illusory):
+	if(!illusory or isReal):
 		if body.get_name() == "Player":
 			if(!activated):
 				activated = true
@@ -30,8 +31,12 @@ func _on_Area2D_body_entered(body):
 func try_interact(raycast, dir):
 	raycast.cast_to = dir * interactDist
 	if raycast.is_colliding():
-		if raycast.get_collider().has_method("on_interact"):
-			raycast.get_collider().on_interact()
+		if raycast.get_collider().has_method("isIllusory"):
+			if(!raycast.get_collider().isIllusory()):
+				if(raycast.get_collider().has_method("isActivated")):
+					if(raycast.get_collider().isActivated() and !activated) or (!raycast.get_collider().isActivated() and activated):
+						if raycast.get_collider().has_method("on_interact"):
+							raycast.get_collider().on_interact()
 
 func _on_AnimatedSprite_animation_finished():
 	try_interact(raycastNorth, northDir)
@@ -40,34 +45,37 @@ func _on_AnimatedSprite_animation_finished():
 	try_interact(raycastWest, westDir)
 
 func _on_FadeArea_area_entered(area):
-	if area.get_name() == "LookingGlass":
-		lookingGlassed = true
-		if(illusory):
-			tweenEffect(1, 0)
-		else:
-			tweenEffect(0, 1)
+	if(!isReal):
+		if area.get_name() == "LookingGlass":
+			lookingGlassed = true
+			if(illusory):
+				tweenEffect(1, 0)
+			else:
+				tweenEffect(0, 1)
 
 func _on_FadeArea_area_exited(area):
-	if area.get_name() == "LookingGlass":
-		lookingGlassed = false
-		if(illusory):
-			tweenEffect(0, 1)
-		else:
-			tweenEffect(1, 0)
+	if(!isReal):
+		if area.get_name() == "LookingGlass":
+			lookingGlassed = false
+			if(illusory):
+				tweenEffect(0, 1)
+			else:
+				tweenEffect(1, 0)
 
 func illusion_toggle():
-	if(illusory):
-		illusory = false
-		if(!lookingGlassed):
-			tweenEffect(1, 0)
+	if(!isReal):
+		if(illusory):
+			illusory = false
+			if(!lookingGlassed):
+				tweenEffect(1, 0)
+			else:
+				tweenEffect(0, 1)
 		else:
-			tweenEffect(0, 1)
-	else:
-		illusory = true
-		if(!lookingGlassed):
-			tweenEffect(0, 1)
-		else:
-			tweenEffect(1, 0)
+			illusory = true
+			if(!lookingGlassed):
+				tweenEffect(0, 1)
+			else:
+				tweenEffect(1, 0)
 
 func tweenEffect(from, to):
 	tween.interpolate_property(anim, "modulate",

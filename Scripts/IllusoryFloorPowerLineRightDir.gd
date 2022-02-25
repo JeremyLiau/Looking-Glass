@@ -67,3 +67,9 @@ func tweenEffect(from, to):
 	Color(1,1,1,from), Color(1,1,1,to), .2,
 	Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	tween.start()
+
+func isIllusory():
+	return illusory
+	
+func isActivated():
+	return activated
