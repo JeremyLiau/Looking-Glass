@@ -417,7 +417,7 @@ points = PoolVector2Array( 16, 48, 0, 48, 0, 0, 16, 0 )
 [node name="Level2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
-position = Vector2( -1032, 264 )
+position = Vector2( -1128, 248 )
 z_index = 10
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
