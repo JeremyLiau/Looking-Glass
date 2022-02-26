@@ -7,13 +7,13 @@ func _ready():
 	pass # Replace with function body.
 
 func lever_toggle():
-	if(anim.frame == 0):
-		anim.frame = 1
+	if(anim.animation == "deactivate" or anim.animation == "default"):
+		anim.play("activate")
 		illusionToggleMembers = get_tree().get_nodes_in_group("Toggle")
 		for member in illusionToggleMembers:
 			member.illusion_toggle()
 	else:
-		anim.frame = 0
+		anim.play("deactivate")
 		illusionToggleMembers = get_tree().get_nodes_in_group("Toggle")
 		for member in illusionToggleMembers:
 			member.illusion_toggle()
