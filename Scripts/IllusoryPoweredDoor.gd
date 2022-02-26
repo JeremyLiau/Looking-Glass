@@ -28,11 +28,9 @@ func on_interact():
 	if(!illusory):
 		if(!activated):
 			activated = true
-			wallSpr.visible = false
 			anim.play("activated")
 		else:
 			activated = false
-			wallSpr.visible = true
 			collisionShape.disabled = false
 			anim.play("deactivated")
 
@@ -59,6 +57,7 @@ func _on_FadeArea_area_entered(area):
 					Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 					tween.start()
 				else:
+					print("test")
 					tween.interpolate_property(wallSpr, "modulate",
 					Color(1,1,1,0), Color(1,1,1,1), .2,
 					Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
@@ -118,7 +117,7 @@ func illusion_toggle():
 	if(!isReal):
 		if(illusory):
 			illusory = false
-			if(hasWall and !activated):
+			if(hasWall):
 				wallCollision.disabled = true
 			if(!lookingGlassed):
 				tweenEffect(1, 0)
@@ -132,7 +131,7 @@ func illusion_toggle():
 				collisionShape.disabled = false
 		else:
 			illusory = true
-			if(hasWall and !activated):
+			if(hasWall):
 				wallCollision.disabled = false
 			if(!lookingGlassed):
 				tweenEffect(0, 1)
