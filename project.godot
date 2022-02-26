@@ -11,7 +11,8 @@ config_version=4
 [application]
 
 config/name="It is not real"
-run/main_scene="res://Scenes/Levels/Level1.tscn"
+config/description="A game developed in 7 days for the Brackey's Game Jam 2022.1. The theme was \"It is not real\"."
+run/main_scene="res://Scenes/SceneManager.tscn"
 config/icon="res://icon.png"
 
 [display]

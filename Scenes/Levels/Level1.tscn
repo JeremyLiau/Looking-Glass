@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineNine.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/NextLevelArea.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Illusory CW Power Line Tiles/IllusoryCWFloorPowerLineFour.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Floor Switches/Key4FloorSwitch.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/LookingGlass.tscn" type="PackedScene" id=5]
@@ -597,3 +598,6 @@ illusory = false
 
 [node name="Key4FloorSwitch" parent="." instance=ExtResource( 4 )]
 position = Vector2( -888, 152 )
+
+[node name="NextLevelArea" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1048, -344 )
