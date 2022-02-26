@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LookingGlass.png-bca1fb4b8d084c8fcf2286ccd0ef8e68.stex"
+path="res://.import/LookingGlassShine.png-7c14c51c919406e437b614b6705d5e10.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/LookingGlass.png"
-dest_files=[ "res://.import/LookingGlass.png-bca1fb4b8d084c8fcf2286ccd0ef8e68.stex" ]
+source_file="res://Sprites/LookingGlassShine.png"
+dest_files=[ "res://.import/LookingGlassShine.png-7c14c51c919406e437b614b6705d5e10.stex" ]
 
 [params]
 
