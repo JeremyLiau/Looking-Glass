@@ -19,3 +19,7 @@ func _on_TransitionScreen_transitioned():
 		
 func transition():
 	$TransitionScreen.transition()
+
+
+func _on_Music_finished():
+	$Music.play()
