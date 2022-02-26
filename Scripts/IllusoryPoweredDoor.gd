@@ -79,6 +79,10 @@ func _on_FadeArea_area_exited(area):
 				lookingGlassed = false
 				if(playerBehind):
 					tweenEffect(0.5, 0)
+					tween.interpolate_property(wallSpr, "modulate",
+					Color(1,1,1,0), Color(1,1,1,0.5), .2,
+					Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+					tween.start()
 				else:
 					tweenEffect(1, 0)
 					tween.interpolate_property(wallSpr, "modulate",
@@ -107,6 +111,12 @@ func _on_FadeArea_body_entered(body):
 				Color(1,1,1,1), Color(1,1,1,0.5), .2,
 				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 				tween.start()
+		elif(activated):
+			if(!illusory):
+				tween.interpolate_property(wallSpr, "modulate",
+				Color(1,1,1,1), Color(1,1,1,0.5), .2,
+				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+				tween.start()
 
 func _on_FadeArea_body_exited(body):
 	playerBehind = false
@@ -119,6 +129,11 @@ func _on_FadeArea_body_exited(body):
 		if body.get_name() == "Player":
 			if(!activated):
 				tweenEffect(0.5, 1)
+	else:
+		tween.interpolate_property(wallSpr, "modulate",
+		Color(1,1,1,0.5), Color(1,1,1,1), .2,
+		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		tween.start()
 
 func illusion_toggle():
 	if(!isReal):
