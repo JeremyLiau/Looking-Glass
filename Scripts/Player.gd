@@ -23,19 +23,26 @@ func _physics_process(delta):
 	else:
 		velocity = Vector2.ZERO
 		
+	if(velocity != Vector2(0, 0)):
+		anim.playing = true
+	else:
+		anim.playing = false
+	
 	move_and_collide(velocity * delta)
 	
 	if(velocity.y > 0): #Facing Down
-		anim.frame = 0
+		anim.play("frontwalk")
 		facingDir = Vector2(0, 1)
 	elif(velocity.y < 0): #Facing Up
-		anim.frame = 1
+		anim.play("backwalk")
 		facingDir = Vector2(0, -1)
 	elif(velocity.x > 0): #Facing Right
-		anim.frame = 3
+		anim.play("sidewalk")
+		anim.flip_h = true
 		facingDir = Vector2(1, 0)
 	elif(velocity.x < 0): #Facing Left
-		anim.frame = 2
+		anim.play("sidewalk")
+		anim.flip_h = false
 		facingDir = Vector2(-1, 0)
 		
 func _process(_delta):
