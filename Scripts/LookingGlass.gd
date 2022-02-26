@@ -14,6 +14,7 @@ func _ready():
 
 func _physics_process(_delta):
 	position = get_global_mouse_position()
+	"""
 	if Input.is_action_just_pressed("left_mouse"):
 		if scale == standardScale:
 			scale = iconScale
@@ -21,6 +22,7 @@ func _physics_process(_delta):
 		else:
 			scale = standardScale
 			$CollisionShape2D.disabled = false
+	"""
 
 func shineAnimation():
 	anim.play("shine")
