@@ -1,8 +1,9 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://Sprites/StandardFloorTile.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/NextLevelArea.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/EndOfLevelSprSheet.png" type="Texture" id=3]
+[ext_resource path="res://Music & SFX/EndArea.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
@@ -272,7 +273,10 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -1, -1 )
 frames = SubResource( 62 )
-frame = 52
+frame = 56
 playing = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

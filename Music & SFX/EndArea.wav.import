@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/EndArea.wav-cf466e7067d7ef12a381e272f3beff9c.sample"
+
+[deps]
+
+source_file="res://Music & SFX/EndArea.wav"
+dest_files=[ "res://.import/EndArea.wav-cf466e7067d7ef12a381e272f3beff9c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -7,6 +7,7 @@ func _ready():
 	pass # Replace with function body.
 
 func lever_toggle():
+	$AudioStreamPlayer.play()
 	if(anim.animation == "deactivate" or anim.animation == "default"):
 		anim.play("activate")
 		illusionToggleMembers = get_tree().get_nodes_in_group("Toggle")

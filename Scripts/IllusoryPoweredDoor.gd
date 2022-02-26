@@ -11,6 +11,7 @@ export var hasWall = false # Ignored if isReal is true
 onready var wallSpr = $WallSprite
 onready var wallCollision = $WallCollision/CollisionShape2D
 export var isReal = false
+onready var doorSFX = $DoorSFX
 
 func _ready():
 	if isReal:
@@ -29,10 +30,12 @@ func on_interact():
 		if(!activated):
 			activated = true
 			anim.play("activated")
+			doorSFX.play()
 		else:
 			activated = false
 			collisionShape.disabled = false
 			anim.play("deactivated")
+			doorSFX.play()
 
 func _on_AnimatedSprite_animation_finished():
 	if(activated):

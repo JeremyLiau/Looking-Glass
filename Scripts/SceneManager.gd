@@ -8,7 +8,7 @@ const LEVEL4 = preload("res://Scenes/Levels/Level4.tscn")
 const LEVEL5 = preload("res://Scenes/Levels/Level5.tscn")
 
 var levelOrder = [LEVEL1, LEVEL2, LEVEL3, LEVEL4, LEVEL5]
-		
+
 func _on_TransitionScreen_transitioned():
 	$CurrentScene.get_child(0).queue_free()
 	if(!levelOrder.empty()):

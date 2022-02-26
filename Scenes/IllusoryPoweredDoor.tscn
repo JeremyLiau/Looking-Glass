@@ -1,9 +1,10 @@
-[gd_scene load_steps=128 format=2]
+[gd_scene load_steps=129 format=2]
 
 [ext_resource path="res://Sprites/SingleLinePoweredDoorSprSheet.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/SingleLineUnpoweredDoorSprSheet.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/IllusoryPoweredDoor.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/StandardWall.png" type="Texture" id=4]
+[ext_resource path="res://Music & SFX/Door.wav" type="AudioStream" id=5]
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
@@ -546,6 +547,9 @@ texture = ExtResource( 4 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallCollision"]
 position = Vector2( 0, 24 )
 shape = SubResource( 123 )
+
+[node name="DoorSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="area_entered" from="FadeArea" to="." method="_on_FadeArea_area_entered"]

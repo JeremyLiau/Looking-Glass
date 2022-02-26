@@ -17,9 +17,12 @@ export var isReal = true # No toggle between illusory and non-illusory
 export var illusory = true #Toggle exists between illusory and non-illusory, if true, start as an illusory object
 onready var tween = get_node("Tween")
 var lookingGlassed = false #Terrible name, but essentially means that the looking glass is hovering over the object. This is used in the illusion toggle to retain visual when hovered with looking glass while toggling
+onready var floorSwitchSFX = $AudioStreamPlayer
+
 
 func _ready():
 	anim.set_speed_scale(1.5)
+	floorSwitchSFX.volume_db = -8
 
 func _on_Area2D_body_entered(body):
 	if(!illusory or isReal):
@@ -27,9 +30,12 @@ func _on_Area2D_body_entered(body):
 			if(!activated):
 				activated = true
 				anim.play("activated")
+				floorSwitchSFX.play()
+				
 			else:
 				activated = false
 				anim.play("deactivated")
+				floorSwitchSFX.play()
 
 func try_interact(raycast, dir):
 	raycast.cast_to = dir * interactDist

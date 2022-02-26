@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lofi Geek - Peace.mp3-28e85201e7c3028f65aec94c23073853.mp3str"
+
+[deps]
+
+source_file="res://Music & SFX/Lofi Geek - Peace.mp3"
+dest_files=[ "res://.import/Lofi Geek - Peace.mp3-28e85201e7c3028f65aec94c23073853.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
