@@ -128,8 +128,6 @@ func illusion_toggle():
 				wallCollision.disabled = true
 			if(!lookingGlassed):
 				tweenEffect(1, 0)
-				#TEST
-				#wallSpr.modulate = Color(1,1,1,1)
 				tween.interpolate_property(wallSpr, "modulate",
 				Color(1,1,1,0), Color(1,1,1,1), .2,
 				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
@@ -148,8 +146,6 @@ func illusion_toggle():
 				wallCollision.disabled = false
 			if(!lookingGlassed):
 				tweenEffect(0, 1)
-				#TEST
-				#wallSpr.modulate = Color(1,1,1,1)
 				tween.interpolate_property(wallSpr, "modulate",
 				Color(1,1,1,1), Color(1,1,1,0), .2,
 				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)

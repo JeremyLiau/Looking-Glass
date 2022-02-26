@@ -416,7 +416,7 @@ points = PoolVector2Array( 16, 48, 0, 48, 0, 0, 16, 0 )
 } ]
 41/z_index = 0
 
-[node name="TutorialLevel" type="Node2D"]
+[node name="Level0" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 10 )]
 position = Vector2( -1136, 888 )
