@@ -50,6 +50,10 @@ func _on_FadeArea_area_entered(area):
 						tweenEffect(0, 0.5)
 					else:
 						tweenEffect(0, 1)
+						tween.interpolate_property(wallSpr, "modulate",
+						Color(1,1,1,1), Color(1,1,1,0), .2,
+						Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+						tween.start()
 			if(hasWall and illusory):
 				if(playerBehind):
 					tween.interpolate_property(wallSpr, "modulate",
@@ -57,7 +61,6 @@ func _on_FadeArea_area_entered(area):
 					Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 					tween.start()
 				else:
-					print("test")
 					tween.interpolate_property(wallSpr, "modulate",
 					Color(1,1,1,0), Color(1,1,1,1), .2,
 					Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
@@ -78,6 +81,10 @@ func _on_FadeArea_area_exited(area):
 					tweenEffect(0.5, 0)
 				else:
 					tweenEffect(1, 0)
+					tween.interpolate_property(wallSpr, "modulate",
+					Color(1,1,1,0), Color(1,1,1,1), .2,
+					Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+					tween.start()
 			if(hasWall and illusory):
 				tween.interpolate_property(wallSpr, "modulate",
 				Color(1,1,1,1), Color(1,1,1,0), .2,
@@ -121,6 +128,12 @@ func illusion_toggle():
 				wallCollision.disabled = true
 			if(!lookingGlassed):
 				tweenEffect(1, 0)
+				#TEST
+				#wallSpr.modulate = Color(1,1,1,1)
+				tween.interpolate_property(wallSpr, "modulate",
+				Color(1,1,1,0), Color(1,1,1,1), .2,
+				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+				tween.start()
 			else:
 				tweenEffect(0, 1)
 				tween.interpolate_property(wallSpr, "modulate",
@@ -135,6 +148,12 @@ func illusion_toggle():
 				wallCollision.disabled = false
 			if(!lookingGlassed):
 				tweenEffect(0, 1)
+				#TEST
+				#wallSpr.modulate = Color(1,1,1,1)
+				tween.interpolate_property(wallSpr, "modulate",
+				Color(1,1,1,1), Color(1,1,1,0), .2,
+				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+				tween.start()
 			else:
 				tweenEffect(1, 0)
 				tween.interpolate_property(wallSpr, "modulate",
